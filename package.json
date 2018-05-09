@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +12,11 @@
     "fs": "0.0.1-security",
     "googleapis": "^30.0.0",
     "opn": "^5.3.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "bcrypt": "^2.0.1",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.7",
+    "sequelize-cli": "^4.0.0"
   }
 }
