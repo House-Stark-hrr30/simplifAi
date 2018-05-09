@@ -1,23 +1,22 @@
 {
   "name": "simplifai",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "fs": "0.0.1-security",
+    "googleapis": "^30.0.0",
+    "opn": "^5.3.0",
+    "path": "^0.12.7",
     "bcrypt": "^2.0.1",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
-    "pg": "^7.4.3",
-    "pg-hstore": "^2.3.2",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
     "sequelize": "^4.37.7",
     "sequelize-cli": "^4.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
   }
 }
