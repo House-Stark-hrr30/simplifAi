@@ -5,29 +5,46 @@ const bcrypt = require("bcrypt");
 module.exports = function(sequelize, DataTypes) {
   const User = sequelize.define('users', {
     user_id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
     },
     firstName: {
-        type: DataTypes.DATE,
-        field: 'first_name'
+      type: DataTypes.String,
+      // field: 'first_name', // ? is this necessary?
+      validate: {
+        notNull: true,
+      }
     },
     lastName: {
-        type: DataTypes.DATE,
-        field: 'last_name'
+      type: DataTypes.String,
+      // field: 'last_name', // ? is this necessary?
+      validate: {
+        notNull: true,
+      }
     },
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true,
+        notNull: true,
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      validate: {
+        notNull: true
+      }
+    }
   }, {
     freezeTableName: true,
     instanceMethods: {
-        generateHash(password) {
-            return bcrypt.hash(password, bcrypt.genSaltSync(8));
-        },
-        validPassword(password) {
-            return bcrypt.compare(password, this.password);
-        }
+      generateHash(password) {
+          return bcrypt.hash(password, bcrypt.genSaltSync(8));
+      },
+      validPassword(password) {
+          return bcrypt.compare(password, this.password);
+      }
     }
   });
   User.associate = function(models) {
