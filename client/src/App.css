@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* @import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700); */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+/*200,300,500,700,600);*/
+
+
+/* -------------------------- */
+
+html, body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+/* a:link {
+  text-decoration: none;
+  color: #fff;
+} */
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+/* a:hover {
+  text-decoration: none;
+  color: black;
+} */
+
+.App {
+  /* text-align: center; */
+  /* height: 100vh; */
+  /* width: 100vw; */
+}
+
+.App-header {
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(44, 16, 35, 0.575);
+  /* top: 0%; */
+  /* width: 100%; */
+  /* height: 85px; */
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* padding: 20px; */
+  color: rgb(20, 7, 7);
+  /* display: inline-block; */
+  /* border-bottom: thick double rgb(83, 81, 77); */
+  /* position: relative; */
+  /* position: fixed; */
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.App-header-content {
+  /* position: relative; */
+  /* margin: 0 auto; */
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+}
+
+.App-title {
+  font-size: 2.5em;
+  /* margin-left: 15px; */
+  /* display: inline-block; */
+  /* margin: 0; */
+  /* margin-top: 5px; */
+  /* padding: 0; */
+  /* position: relative; */
+  /* text-align: 50%; */
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  display: block;
+  /* float: center; */
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+
+.App-title-text {
+  /* position: relative; */
+  /* left: 50%; */
+  /* display: block; */
+  /* display: inline; */
+  /* text-align: center; */
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  /* display: inline-block; */
+  /* font-size: 1.5em; */
+  /* margin-top: 5px; */
+  /* float: center; */
+  padding-top: 4%;
+}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  /* height: 50px; */
+  /* display: inline-block; */
+  /* padding: 10px 0px 3px 3px; */
+  /* text-align: right; */
+  /* vertical-align: right; */
+  /* position: relative; */
+  /* display: inline; */
+  /* float: center; */
+  /* margin-top: 10px; */
+  /* margin-right: 10px; */
+  /* margin-left: 50%; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  grid-column-start: 12;
+  grid-column-end: 13;
+  padding-top: 15%;
+}
+
+.App-logo-pic {
+  height: 50px;
+}
+
+.App-header-menu {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding-top: 5%;
+}
+
+/* .App-header-menu-home {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.App-header-menu-upload {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.App-header-menu-about {
+  grid-column-start: 3;
+  grid-column-end: 4;
+} */
+
+.App-header-menu li {
+  float: left;
+  color: #f2f2f2;
+  padding: 10px 20px 10px 20px;
+}
+
+.App-header-menu li a:hover {
+  /* background: #ddd; */
+  color: black;
+  font-style: italic;
+}
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+.App-logo:hover {
+  transform: translateY(-2px);
+}
+
+.App-logo:active {
+  transform: translateY(-1px);
+}
+
+.App-intro {
+  font-size: large;
+  /* position: relative; */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.App-footer {
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(44, 16, 35, 0.575);
+  /* top: 0%; */
+  /* width: 100%; */
+  /* height: 85px; */
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* padding: 20px; */
+  color: #fff;
+  text-align: center;
+  padding: 15px 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  /* float: bottom; */
+  /* display: inline-block; */
+  /* border-bottom: thick double rgb(83, 81, 77); */
+  /* position: relative; */
+  /* display: flex;
+  flex-direction: row; */  
+}
