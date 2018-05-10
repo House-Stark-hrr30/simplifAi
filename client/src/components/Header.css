@@ -23,6 +23,7 @@
 .header-content {
   /* position: relative; */
   /* margin: 0 auto; */
+  /* width: 100%; */
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 40px;
@@ -111,6 +112,7 @@
   grid-column-start: 3;
   grid-column-end: 4;
   font-size: 0.9em;
+  white-space: nowrap;
 }
 
 .header-content p {

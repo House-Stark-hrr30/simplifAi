@@ -50,8 +50,6 @@ class App extends Component {
           toggleModal={this.toggleModal.bind(this)}
         />
 
-        
-
         <Switch>
           <Route
             exact path='/'
@@ -72,7 +70,6 @@ class App extends Component {
               <p> In about us page </p>
             }
           />
-
         </Switch>
 
         <footer className="App-footer">
@@ -81,7 +78,7 @@ class App extends Component {
 
         <Modal show={this.state.isOpen}
           onClose={this.toggleModal.bind(this)}>
-          `Here's some content for the modal`
+          {/* `Here's some content for the modal` */}
         </Modal>
         
       </div>

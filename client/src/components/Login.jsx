@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import axios from 'axios'; // still need to install?
+import Signup from './Signup.jsx';
+import './Login.css';
 
 class Login extends Component {
   constructor(props) {
@@ -9,15 +11,22 @@ class Login extends Component {
     this.state = {
       username: '',
       password: '',
-      failedLogin: ''
+      // failedLogin: '',
+      signupClick: false
     };
   }
 
   updateInfo(e) {
     this.setState({
       [e.target.name]: e.target.value,
-      failedLogin: ''
+      // failedLogin: ''
     });
+  }
+
+  signupToggle() {
+    this.setState({
+      signupClick: !this.state.signupClick
+    })
   }
 
   // sendLogin(e) {
@@ -31,10 +40,57 @@ class Login extends Component {
   // }
 
   render() {
-    <div>
 
+    if (this.state.signupClick) {
+      return (
+        <Signup />
+      );
+    }
 
-    </div>
+    return (
+      <div className="Login">
+        <form action="localhost:3000/api/login" method="post">
+          <div>
+            <label>Username:</label>
+            <input
+              type="text"
+              id="login_username"
+              name="login_user_username"
+            />
+          </div>
+
+          <div>
+            <label>Password:</label>
+            <input 
+              type="password" 
+              id="login_password" 
+              name="login_user_password" 
+            />
+          </div>
+
+        {/*   <div>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </div> */}
+         
+          <div>
+            <button type="submit" className="login-btn">
+              Login
+            </button>
+          </div>
+
+          <div>
+            <button className="signup-btn" 
+              onClick={this.signupToggle.bind(this)}
+            >
+              Sign Up
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    );
   }
 }
 
