@@ -6,13 +6,26 @@ class Upload extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      spreadSheetData: []
+      spreadSheetData: [],
+      googleSheetID: ''
     }
+  }
+
+  handleGoogleSheetIDChange(e) {
+    console.log(this.state.googleSheetID);
+    this.setState({
+      googleSheetID: e.target.value
+    });
   }
 
   handleClick() {
     console.log('Entered handleClick....');
-    axios.get('http://localhost:3000/getSpreadsheetData')
+    axios.get('http://localhost:3000/getSpreadsheetData', {
+      params: {
+        googleSheetID: this.state.googleSheetID
+      }
+      })
+
       .then((res) => {
         console.log(res.data);
         this.setState({
@@ -52,6 +65,9 @@ class Upload extends Component {
         <div className="grid__item">
           <div className="content">
             <div className="content-inside">
+              <input type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
+            <button type="button" className="button" onClick={this.handleClick.bind(this)}>Import</button>
+              <br />
               Data:
               <div>
               <ul>{ this.generateSpreadSheetDataTable() }</ul>
@@ -65,7 +81,6 @@ class Upload extends Component {
         <div className="grid__item">
           <div className="content">
             <div className="content-inside">
-            <button type="button" className="button" onClick={this.handleClick.bind(this)}>Button</button>
             </div>
           </div>
         </div>
