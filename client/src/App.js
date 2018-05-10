@@ -1,39 +1,55 @@
 import React, { Component } from 'react';
 import './App.css';
-import wolf from './wolf.png';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import Header from './components/Header.jsx';
 import Upload from './components/Upload.jsx';
+// import LoginModal from './components/LoginModal.jsx';
+// import SignupModal from '/components/SignupModal.jsx';
+import Modal from './components/Modal.jsx';
+
+// const ModalConductor = currentModal => {
+//   switch (currentModal) {
+//     case 'login':
+//       return <LoginModal {...props}/>;
+
+//     case 'signup':
+//       return <SignupModal {...props}/>;
+
+//     default:
+//       return null;
+//   }
+// };
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentModal: 'login',
+      isOpen: false
+    }
+  }
+
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
+  // handleLogoClick() {
+    // this.setState({
+      
+    // });
+    // ModalConductor(currentModal);
+  // }
+
   render() {
     return (
       <div className="App">
 
-        <header className="App-header">
+        <Header 
+          toggleModal={this.toggleModal.bind(this)}
+        />
 
-          <div className="App-header-content">
-
-              <ul className="App-header-menu">
-                <li className="App-header-menu-home"><a href="/"> Home </a></li>
-                <li className="App-header-menu-upload"><a href="/upload"> Upload </a></li>
-                <li className="App-header-menu-about"><a href="/about"> About Us </a></li>
-              </ul>
-
-            <div className="App-title">
-              <div className="App-title-text">
-                simplifAi
-              </div>
-            </div>
-
-            <div className="App-logo">
-              <a><img src={wolf} className="App-logo-pic" alt="logo" /></a>
-            </div>
-
-          </div>
-
-        </header>
-
-        <BrowserRouter>
         <Switch>
           <Route
             exact path='/'
@@ -54,15 +70,19 @@ class App extends Component {
               <p> In about us page </p>
             }
           />
-
         </Switch>
-        </BrowserRouter>
 
         <footer className="App-footer">
           Copyright 2018 simplifAi
         </footer>
 
+        <Modal show={this.state.isOpen}
+          onClose={this.toggleModal.bind(this)}>
+          {/* `Here's some content for the modal` */}
+        </Modal>
+        
       </div>
+
     );
   }
 }
