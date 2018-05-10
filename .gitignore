@@ -24,5 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 yarn-error.log*
 
-client_secret.json
-credentials.json
+# see example files for file structure
+server/client_secret.json
+server/credentials.json

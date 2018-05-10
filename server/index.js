@@ -7,6 +7,12 @@ const googleHelpers = require('./googleHelpers.js');
 // const session = require('express-session');
 // const db = require('../database/index.js');
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 //Initializes json bodyparser
 app.use(bodyParser.json());
 
@@ -20,7 +26,8 @@ app.get('/', (req, res) => {
 // Note the response is passed in as an argument in googleHelpers.getSpreadsheetData
 app.get('/getSpreadsheetData', (req, res) => {
   console.log('Entered getSpreadsheetData get req ....');
-  googleHelpers.getSpreadsheetData(res);
+  console.log(req.query.googleSheetID);
+  googleHelpers.getSpreadsheetData(res, req.query.googleSheetID);
 });
 
 module.exports = app;
