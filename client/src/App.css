@@ -46,12 +46,7 @@ table {
   border-spacing: 0;
 }
 
-/* @import url(http://fonts.googleapis.com/css?family=Lato:400,300,100,700,900&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700); */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
-/*200,300,500,700,600);*/
-
 
 /* -------------------------- */
 
@@ -66,47 +61,18 @@ a {
   outline: none;
 }
 
-/* a:link {
-  text-decoration: none;
-  color: #fff;
-} */
-
 a:visited {
   text-decoration: none;
   color: white;
 }
 
-/* a:hover {
-  text-decoration: none;
-  color: black;
-} */
-
-.App {
-  /* text-align: center; */
-  /* height: 100vh; */
-  /* width: 100vw; */
-}
-
-
-
-.App-intro {
-  font-size: large;
-  /* position: relative; */
-  text-align: center;
-  margin-top: 10px;
-}
-
-.App-footer {
+.footer {
   box-sizing: border-box;
   overflow: hidden;
   background-color: rgba(44, 16, 35, 0.575);
-  /* top: 0%; */
-  /* width: 100%; */
-  /* height: 85px; */
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-  /* padding: 20px; */
   color: #fff;
   text-align: center;
   padding: 15px 5px;
@@ -115,10 +81,4 @@ a:visited {
   left: 0;
   right: 0;
   height: 50px;
-  /* float: bottom; */
-  /* display: inline-block; */
-  /* border-bottom: thick double rgb(83, 81, 77); */
-  /* position: relative; */
-  /* display: flex;
-  flex-direction: row; */  
 }

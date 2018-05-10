@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import axios from 'axios'; // still need to install?
+import axios from 'axios';
 import Signup from './Signup.jsx';
 import './Login.css';
 
 class Login extends Component {
   constructor(props) {
-    
     super(props);
-    
     this.state = {
       username: '',
       password: '',
       // failedLogin: '',
       signupClick: false
     };
+    this.signupToggle = this.signupToggle.bind(this);
   }
 
   updateInfo(e) {
@@ -40,7 +39,6 @@ class Login extends Component {
   // }
 
   render() {
-
     if (this.state.signupClick) {
       return (
         <Signup />
@@ -67,25 +65,17 @@ class Login extends Component {
               name="login_user_password" 
             />
           </div>
-
-        {/*   <div>
-            <label for="msg">Message:</label>
-            <textarea id="msg" name="user_message"></textarea>
-          </div> */}
          
-          <div>
-            <button type="submit" className="login-btn">
-              Login
-            </button>
-          </div>
+          <button type="submit" className="login-btn">
+            Login
+          </button>
 
-          <div>
-            <button className="signup-btn" 
-              onClick={this.signupToggle.bind(this)}
-            >
-              Sign Up
-            </button>
-          </div>
+          <button 
+            className="signup-btn" 
+            onClick={this.signupToggle}
+          >
+            Sign Up
+          </button>
 
         </form>
 

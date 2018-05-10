@@ -4,33 +4,6 @@
   text-align: center;
 }
 
-/* input {
-  -ms-box-sizing:content-box;
-  -moz-box-sizing:content-box;
-  box-sizing:content-box;
-  -webkit-box-sizing:content-box; 
-} */
-
-label {
-  /* width:200px; */
-  /* display: inline-block; */
-  /* float: left; */
-  /* margin-right: 1em; */
-
-  /* float: none;  */
-  /* width: auto;  */
-  /* border: 0 none #FFF;  */
-  /* padding-left: 1em; */
-  /* padding-right: 1em; */
-}
-
-input {
-  /* margin: 10px;
-  padding: 10px; */
-  /* width: 60px; */
-  /* display: inline-block; */
-}
-
 .login-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, .2);

@@ -4,9 +4,7 @@ import './Signup.css';
 
 class Signup extends Component {
   constructor(props) {
-    
-    super(props);
-    
+    super(props);   
     this.state = {
       firstName: '',
       lastName: '',
@@ -88,11 +86,10 @@ class Signup extends Component {
             />
           </div>
          
-          <div>
-            <button type="submit" className="signup-btn">
-              Sign Up
-            </button>
-          </div>
+          <button type="submit" className="signup-btn">
+            Sign Up
+          </button>
+          
         </form>
 
       </div>
