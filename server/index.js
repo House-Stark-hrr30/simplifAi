@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const googleHelpers = require('./googleHelpers.js');
 // const bcrypt = require('bcrypt-nodejs');
 // const auth = require('./helpers.js');
 // const session = require('express-session');
@@ -15,5 +16,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to House Stark server.')
 });
 
+// Gets data from Google spreadsheets
+// Note the response is passed in as an argument in googleHelpers.getSpreadsheetData
+app.get('/getSpreadsheetData', (req, res) => {
+  console.log('Entered getSpreadsheetData get req ....');
+  googleHelpers.getSpreadsheetData(res);
+});
 
 module.exports = app;
