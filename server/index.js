@@ -1,19 +1,32 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+// import node modules
+import express from 'express'
+import bodyParser from 'body-parser'
+import dotenv from 'dotenv';
+
+// import local files
+import routes from './routes.js';
+
+// initialize express
 const app = express();
-// const bcrypt = require('bcrypt-nodejs');
-// const auth = require('./helpers.js');
-// const session = require('express-session');
-// const db = require('../database/index.js');
 
-//Initializes json bodyparser
-app.use(bodyParser.json());
+// run dotenv to configure environment variables for this project
+dotenv.config();
 
-//app.use(express.static(__dirname + '/../client/dist'));
+// serve up static files
+app.use(express.static(__dirname, '../client/public'));
 
-app.get('/', (req, res) => {
-  res.send('Welcome to House Stark server.')
+// direct app to use routes from line 8
+app.use(routes);
+
+
+
+// set the port based on environment or use default if not set
+const PORT = process.env.PORT || 3000;
+
+// start the server
+app.listen(PORT, () => {
+  console.log(`Now listening on port ${PORT}!`)
 });
 
-
-module.exports = app;
+// export the running server
+export default app;
