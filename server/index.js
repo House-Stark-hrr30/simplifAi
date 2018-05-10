@@ -17,6 +17,16 @@ const app = express();
 // run dotenv to configure environment variables for this project
 dotenv.config();
 
+
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+//Initializes json bodyparser
+app.use(bodyParser.json());
+
 // serve up static files
 app.use(express.static(__dirname, '../client/public'));
 

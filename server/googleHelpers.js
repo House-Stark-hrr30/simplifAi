@@ -14,7 +14,7 @@ function getSpreadsheetData(res) {
     console.log('Entered readFile....');
     if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Sheets API.
-    authorize(JSON.parse(content), listMajors, res);
+    authorize(JSON.parse(content), pullSpreadsheetData, res);
   });
 }
 
@@ -75,8 +75,8 @@ function getNewToken(oAuth2Client, callback) {
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {OAuth2Client} auth The authenticated Google OAuth client.
  */
-function listMajors(auth, res) {
-  console.log('Entered listMajors....');
+function pullSpreadsheetData(auth, res) {
+  console.log('Entered pullSpreadsheetData....');
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
     spreadsheetId: '1UfRTUGBCbVBqZ4fed2ypTQYT2qQPdEty75iXkmX4qPY',
