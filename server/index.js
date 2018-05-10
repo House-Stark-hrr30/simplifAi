@@ -26,7 +26,8 @@ app.get('/', (req, res) => {
 // Note the response is passed in as an argument in googleHelpers.getSpreadsheetData
 app.get('/getSpreadsheetData', (req, res) => {
   console.log('Entered getSpreadsheetData get req ....');
-  googleHelpers.getSpreadsheetData(res);
+  console.log(req.query.googleSheetID);
+  googleHelpers.getSpreadsheetData(res, req.query.googleSheetID);
 });
 
 module.exports = app;

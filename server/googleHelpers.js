@@ -8,13 +8,13 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 const TOKEN_PATH = 'credentials.json';
 const path = require('path');
 
-function getSpreadsheetData(res) {
+function getSpreadsheetData(res, googleSheetID) {
   // Load client secrets from a local file.
   fs.readFile(__dirname + '/client_secret.json', (err, content) => {
     console.log('Entered readFile....');
     if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Sheets API.
-    authorize(JSON.parse(content), pullSpreadsheetData, res);
+    authorize(JSON.parse(content), pullSpreadsheetData, res, googleSheetID);
   });
 }
 
@@ -24,7 +24,7 @@ function getSpreadsheetData(res) {
  * @param {Object} credentials The authorization client credentials.
  * @param {function} callback The callback to call with the authorized client.
  */
-function authorize(credentials, callback, res) {
+function authorize(credentials, callback, res, googleSheetID) {
   console.log('Entered authorize....');
 
   const {client_secret, client_id, redirect_uris} = credentials.installed;
@@ -34,7 +34,7 @@ function authorize(credentials, callback, res) {
   fs.readFile(TOKEN_PATH, (err, token) => {
     if (err) return getNewToken(oAuth2Client, callback);
     oAuth2Client.setCredentials(JSON.parse(token));
-    callback(oAuth2Client, res);
+    callback(oAuth2Client, res, googleSheetID);
   });
 }
 
@@ -75,11 +75,13 @@ function getNewToken(oAuth2Client, callback) {
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {OAuth2Client} auth The authenticated Google OAuth client.
  */
-function pullSpreadsheetData(auth, res) {
+function pullSpreadsheetData(auth, res, googleSheetID) {
   console.log('Entered pullSpreadsheetData....');
+  console.log(googleSheetID);
+  var sheetID = '1UfRTUGBCbVBqZ4fed2ypTQYT2qQPdEty75iXkmX4qPY';
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
-    spreadsheetId: '1UfRTUGBCbVBqZ4fed2ypTQYT2qQPdEty75iXkmX4qPY',
+    spreadsheetId: googleSheetID,
     range: 'Sheet1',
   }, (err, {data}) => {
     if (err) return console.log('The API returned an error: ' + err);
