@@ -38,7 +38,8 @@ app.use(routes);
 // Note the response is passed in as an argument in googleHelpers.getSpreadsheetData
 app.get('/getSpreadsheetData', (req, res) => {
   console.log('Entered getSpreadsheetData get req ....');
-  googleHelpers.getSpreadsheetData(res);
+  console.log(req.query.googleSheetID);
+  googleHelpers.getSpreadsheetData(res, req.query.googleSheetID);
 });
 
 // set the port based on environment or use default if not set

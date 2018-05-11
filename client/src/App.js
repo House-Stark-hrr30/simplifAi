@@ -1,68 +1,47 @@
 import React, { Component } from 'react';
+import Header from './components/Header.jsx';
+import Body from './components/Body.jsx';
+import Footer from './components/Footer.jsx';
+import Modal from './components/Modal.jsx';
 import './App.css';
-import wolf from './wolf.png';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Upload from './components/Upload.jsx';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentModal: 'login',
+      isOpen: false
+    }
+
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
   render() {
     return (
       <div className="App">
 
-        <header className="App-header">
+        <Header 
+          toggleModal={this.toggleModal}
+        />
 
-          <div className="App-header-content">
+        <Body />
 
-              <ul className="App-header-menu">
-                <li className="App-header-menu-home"><a href="/"> Home </a></li>
-                <li className="App-header-menu-upload"><a href="/upload"> Upload </a></li>
-                <li className="App-header-menu-about"><a href="/about"> About Us </a></li>
-              </ul>
+        <Footer />
 
-            <div className="App-title">
-              <div className="App-title-text">
-                simplifAi
-              </div>
-            </div>
-
-            <div className="App-logo">
-              <a><img src={wolf} className="App-logo-pic" alt="logo" /></a>
-            </div>
-
-          </div>
-
-        </header>
-
-        <BrowserRouter>
-        <Switch>
-          <Route
-            exact path='/'
-            render={() => 
-              <p className="App-intro">
-                Welcome to simplifAi
-              </p>            
-            }
-          />
-
-          <Route
-            path='/upload'
-            component={ Upload }
-          />
-
-          <Route path='/about'
-            render={() => 
-              <p> In about us page </p>
-            }
-          />
-
-        </Switch>
-        </BrowserRouter>
-
-        <footer className="App-footer">
-          Copyright 2018 simplifAi
-        </footer>
-
+        <Modal 
+          show={this.state.isOpen}
+          onClose={this.toggleModal}
+        >
+        </Modal>
+        
       </div>
+
     );
   }
 }
