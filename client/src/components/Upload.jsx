@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Upload.css';
 import axios from 'axios';
+import SpreadsheetTable from './SpreadsheetTable';
 
 class Upload extends Component {
   constructor(props) {
@@ -18,8 +19,8 @@ class Upload extends Component {
     });
   }
 
-  handleClick() {
-    console.log('Entered handleClick....');
+  handleImportClick() {
+    console.log('Entered handleImportClick....');
     axios.get('http://localhost:3000/getSpreadsheetData', {
       params: {
         googleSheetID: this.state.googleSheetID
@@ -37,16 +38,9 @@ class Upload extends Component {
       });
   }
 
-  generateSpreadSheetDataTable() {
-  const tableItems = this.state.spreadSheetData.map((row, index) =>
-    <li key={index}>
-      {row}
-    </li>
-  );
-  return (
-    <ul>{tableItems}</ul>
-  );
-}
+  handleSubmitClick() {
+    console.log('Entered handleSubmitClick....');
+  }
 
   render() {
 
@@ -65,30 +59,16 @@ class Upload extends Component {
         <div className="grid__item">
           <div className="content">
             <div className="content-inside">
-              <input type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
-            <button type="button" className="button" onClick={this.handleClick.bind(this)}>Import</button>
-              <br />
-              Data:
+            <div>
+              <input className="spreadsheet-input" type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
+              <button type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
+              <button type="button" className="submit" onClick={this.handleSubmitClick.bind(this)}>Submit</button>
+              </div>
               <div>
-              <ul>{ this.generateSpreadSheetDataTable() }</ul>
+                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} />
               </div>
               <form>
               </form>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid__item">
-          <div className="content">
-            <div className="content-inside">
-            </div>
-          </div>
-        </div>
-
-        <div className="grid__item">
-          <div className="content content-lr">
-            <div className="content-inside">
-            <button type="submit" className="submit-button">Submit</button>
             </div>
           </div>
         </div>

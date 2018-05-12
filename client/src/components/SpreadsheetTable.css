@@ -1,0 +1,29 @@
+
+
+.rc-table {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+.rc-table th {
+  background-color: rgba(44, 16, 35, 0.575);
+  color: white;
+  font: inherit;
+  font-size: 16px;
+  font-family: Raleway;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+  min-width: 100px;
+}
+
+.rc-table td {
+  min-width: 100px;
+  border: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rc-table tr:hover {
+  background: #eee;
+}
