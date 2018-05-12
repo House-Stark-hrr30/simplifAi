@@ -25,5 +25,5 @@ yarn-error.log*
 yarn-error.log*
 
 # see example files for file structure
-server/client_secret.json
-server/credentials.json
+client_secret.json
+credentials.json
