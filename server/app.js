@@ -9,6 +9,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import expressValidator from 'express-validator';
 import session from 'express-session';
+import morgan from 'morgan'
 // const auth = require('./helpers.js');
 // const db = require('../database/index.js');
 

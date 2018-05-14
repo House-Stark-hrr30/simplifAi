@@ -1,4 +1,4 @@
-morganSettings = (tokens, req, res) => {
+const morganSettings = (tokens, req, res) => {
   return [
   tokens.method(req, res),
   tokens.url(req, res),
