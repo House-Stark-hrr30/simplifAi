@@ -5,12 +5,12 @@ const readline = require('readline');
 const {google} = require('googleapis');
 const OAuth2Client = google.auth.OAuth2;
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-const TOKEN_PATH = 'credentials.json';
+const TOKEN_PATH = '../../credentials.json';
 const path = require('path');
 
 function getSpreadsheetData(res, googleSheetID) {
   // Load client secrets from a local file.
-  fs.readFile(__dirname + '/client_secret.json', (err, content) => {
+  fs.readFile(__dirname + '../../client_secret.json', (err, content) => {
     console.log('Entered readFile....');
     if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Sheets API.
@@ -22,7 +22,7 @@ function getSpreadsheetData(res, googleSheetID) {
  * Create an OAuth2 client with the given credentials, and then execute the
  * given callback function.
  * @param {Object} credentials The authorization client credentials.
- * @param {function} callback The callback to call with the authorized client.
+ * @param {callback} callback The callback to call with the authorized client.
  */
 function authorize(credentials, callback, res, googleSheetID) {
   console.log('Entered authorize....');
