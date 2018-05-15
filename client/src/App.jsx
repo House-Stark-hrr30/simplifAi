@@ -16,7 +16,7 @@ class App extends Component {
     this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal = () => {
+  toggleModal () {
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -37,11 +37,9 @@ class App extends Component {
         <Modal 
           show={this.state.isOpen}
           onClose={this.toggleModal}
-        >
-        </Modal>
+        />
         
       </div>
-
     );
   }
 }

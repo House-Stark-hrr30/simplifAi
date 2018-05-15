@@ -20,7 +20,7 @@ class Upload extends Component {
 
   handleClick() {
     console.log('Entered handleClick....');
-    axios.get('http://localhost:3000/getSpreadsheetData', {
+    axios.get('data/getGSheet', {
       params: {
         googleSheetID: this.state.googleSheetID
       }

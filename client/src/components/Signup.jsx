@@ -21,7 +21,7 @@ class Signup extends Component {
   }
 
   sendInfo() { 
-    axios.post('localhost:3000/api/signup', this.state)
+    axios.post('/user/signup', this.state)
       .then((data) => {
         this.setState({
           status: true
@@ -49,7 +49,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="Signup">
-        <form action="localhost:3000/api/signup" method="post">
+        <form action="/user/signup" method="post">
           <div>
             <label>First Name:</label>
             <input

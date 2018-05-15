@@ -29,7 +29,7 @@ class Login extends Component {
   }
 
   // sendLogin(e) {
-  //   axios.post('localhost:3000/api/login', this.state)
+  //   axios.post('/user/login', this.state)
   //     .catch((err) => {
   //       this.setState({
   //         failedLogin: 'Incorrect username or password.'
@@ -47,7 +47,7 @@ class Login extends Component {
 
     return (
       <div className="Login">
-        <form action="localhost:3000/api/login" method="post">
+        <form action="/api/login" method="post">
           <div>
             <label>Username:</label>
             <input
