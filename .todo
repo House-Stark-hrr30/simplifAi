@@ -1,0 +1,12 @@
+set up endpoints:
+  ☐ user/login
+  ☐ user/signup
+  ☐ user.get
+  ☐ data/saveData @today
+  ☐ data/getGSheet @today
+
+set up database methods:
+  ☐ fetchUser
+  ☐ fetchData
+  ☐ saveUser
+  ☐ saveData
