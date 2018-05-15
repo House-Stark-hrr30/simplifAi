@@ -24,6 +24,9 @@ yarn-debug.log*
 yarn-error.log*
 yarn-error.log*
 
+#database config
+databse/config/config.json
+
 # see example files for file structure
 client_secret.json
 credentials.json
