@@ -16,6 +16,7 @@ import googleHelpers from './helpers/googleHelpers.js';
 import morganConfig from './middleware/morgan';
 import sessionConfig from './middleware/sessions';
 import passport from './middleware/passport/passport';
+import db from '../database/models/index';
 
 // import routes
 import user from './routes/user.js';
@@ -33,7 +34,9 @@ app.use(function(req, res, next) {
 //Initialize configurations
 app.use(morgan(morganConfig));
 app.use(bodyParser.json());
-// app.use(expressValidator); // todo: figure out config for validator and apply to individual post methods in routes
+// todo: figure out config for validator and apply to individual post methods in routes
+  // @see https://github.com/express-validator/express-validator
+  // app.use(expressValidator);
 
 // serve up static files
 app.use(express.static(__dirname + '/../client/build'));

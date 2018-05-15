@@ -9,10 +9,18 @@ var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
 if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable], config);
+  var sequelize = new Sequelize(process.env[config.use_env_variable], config, {logging: true, insecureAuth: true});
 } else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+  var sequelize = new Sequelize(config.database, config.username, config.password, config, {logging: true, insecureAuth: true});
 }
+
+// sequelize.authenticate()
+//   .then(() => {
+//     console.log('Connection has been established successfully.');
+//   })
+//   .catch(err => {
+//     console.error('Unable to connect to the database:', err);
+//   });
 
 fs
   .readdirSync(__dirname)
@@ -28,9 +36,12 @@ Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
-});
+})
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+sequelize
+  .sync({force: false});
 
 module.exports = db;

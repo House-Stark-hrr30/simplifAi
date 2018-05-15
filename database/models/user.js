@@ -1,24 +1,22 @@
 'use strict';
 
-const bcrypt = require("bcrypt");
+import bcrypt from 'bcrypt-nodejs';
 
-module.exports = function(sequelize, DataTypes) {
-  const User = sequelize.define('users', {
+export default function (sequelize, DataTypes) {
+  const User = sequelize.define('User', {
     user_id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
-    firstName: {
-      type: DataTypes.String,
-      // field: 'first_name', // ? is this necessary?
+    first_name: {
+      type: DataTypes.STRING,
       validate: {
         notNull: true,
       }
     },
-    lastName: {
-      type: DataTypes.String,
-      // field: 'last_name', // ? is this necessary?
+    last_name: {
+      type: DataTypes.STRING,
       validate: {
         notNull: true,
       }
@@ -33,25 +31,30 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       validate: {
-        notNull: true
+        notNull: true,
+        len: [8, 75]
       }
-    }
+    },
+    googleId: DataTypes.STRING
   }, {
-    freezeTableName: true,
-    instanceMethods: {
-      generateHash(password) {
-          return bcrypt.hash(password, bcrypt.genSaltSync(8));
+      freezeTableName: true,
+      hooks: {
+        afterValidate: function (user) {
+          user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(8));
+        }
       },
-      validPassword(password) {
+      instanceMethods: {
+        isValidPassword(password) {
           return bcrypt.compare(password, this.password);
+        }
       }
-    }
-  });
-  User.associate = function(models) {
-    // associations can be defined here
+    });
+  User.associate = function (models) {
+    User.hasMany(models.Data_Store, {
+      foreignKey: models.Data_Store.data_id
+    });
   };
-
   return User;
 }
 
-// ? call instance methods using: models.User.find(<username>).success((user) => user.<method_call>(<parameter>));
+// * call instance methods using: models.User.find(<username>).success((user) => user.<method_call>(<parameter>));
