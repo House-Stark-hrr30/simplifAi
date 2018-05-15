@@ -24,7 +24,7 @@
   position: relative;
   width: 100%;
   /* border: 1px solid #ccc; */
-  /* grid-template-areas: 
+  /* grid-template-areas:
     "a b b b a"
     "a c c c a"
     "a c c c a"
@@ -68,17 +68,17 @@
     }
   }
   &:nth-child(2) {
-    grid-column: 3 / 4; 
+    grid-column: 3 / 4;
     justify-self: center;
   }
   &:nth-child(3) {
-    grid-column: 1 / 2; 
+    grid-column: 1 / 2;
   }
   &:nth-child(4) {
-    grid-column: 2 / 3; 
+    grid-column: 2 / 3;
   }
   &:nth-child(5) {
-    grid-column: 3 / 4; 
+    grid-column: 3 / 4;
   }
 }*/
 
@@ -163,4 +163,17 @@ grid_item .content-inside {
   /* display: flex;
   align-items: center;
   justify-content: center; */
+}
+
+.spreadsheet-input {
+  width: 200px;
+  height: 18px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-family: Raleway;
+  border-radius: 5px;
+}
+
+.import {
+  margin-right: 54%;
 }
