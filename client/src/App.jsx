@@ -3,6 +3,7 @@ import Header from './components/Header.jsx';
 import Body from './components/Body.jsx';
 import Footer from './components/Footer.jsx';
 import Modal from './components/Modal.jsx';
+import Login from './components/Login.jsx';
 import './App.css';
 
 class App extends Component {
@@ -16,17 +17,23 @@ class App extends Component {
     this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal () {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+  toggleModal = (view) => {
+    if(view != null) {
+      const views = {
+        'login': <Login />
+      };
+
+      this.setState({
+        isOpen: !this.state.isOpen,
+        currentModal: views[view]
+      });
+    }
   }
 
   render() {
     return (
       <div className="App">
-
-        <Header 
+        <Header
           toggleModal={this.toggleModal}
         />
 
@@ -34,11 +41,11 @@ class App extends Component {
 
         <Footer />
 
-        <Modal 
+        <Modal
           show={this.state.isOpen}
           onClose={this.toggleModal}
+          component={this.state.currentModal}
         />
-        
       </div>
     );
   }
