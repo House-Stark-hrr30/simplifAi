@@ -22,16 +22,11 @@ class Signup extends Component {
 
   sendInfo() { 
     axios.post('/user/signup', this.state)
-      .then((data) => {
-        this.setState({
-          status: true
-        });
+      .then((res) => {
+        console.log(res)
       })
-      
-      .catch(() => {
-        this.setState({
-          status: false
-        })
+      .catch((err) => {
+        console.log(err);
       })
   }
 
@@ -49,7 +44,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="Signup">
-        <form action="/user/signup" method="post">
+        <form>
           <div>
             <label>First Name:</label>
             <input
@@ -86,7 +81,11 @@ class Signup extends Component {
             />
           </div>
          
-          <button type="submit" className="signup-btn">
+          <button
+            type="button"
+            className="signup-btn"
+            onClick={this.sendInfo} 
+          >
             Sign Up
           </button>
           
