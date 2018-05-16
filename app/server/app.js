@@ -11,6 +11,7 @@ import bodyParser from 'body-parser';
 import expressValidator from 'express-validator';
 import session from 'express-session';
 import morgan from 'morgan';
+import path from 'path';
 
 // === import local files
 import googleHelpers from './helpers/googleHelpers.js';
@@ -30,9 +31,6 @@ app.use(morgan(morganConfig));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// === serve up static files
-app.use(express.static(__dirname + '../../build'));
-
 // === set headers
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -40,23 +38,18 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.use('/*', (req, res) => {
-//   res.status(302).sendFile(__dirname + '../../client/build/index.html'); 
-//   //res.status(400).end('Endpoint does not exist');
-// });
-
 // === initialize sessions and authentication
 app.use(session(sessionConfig));
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
 
+// === serve up static files
+app.use(express.static(path.join(__dirname, '../../client/build')));
 
 // === direct app to use routes set in routes folder
-// app.get('/', (req, res) => res.status(200).end('THIS SUCKS!!!!'));
-// app.use('/user', user);
-// app.use('/data', data);
-// if (process.env.NODE_ENV === 'dev') {
-// }
+app.use('/user', user);
+app.use('/data', data);
+
 
 // export the running server
 export default app;
