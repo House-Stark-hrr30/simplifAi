@@ -6,6 +6,7 @@
   right: 0;
   background-color: rgba(0,0,0,0.3);
   padding: 50px;
+  z-index: 3000;
 }
 
 .modal {
@@ -15,6 +16,9 @@
   min-height: 180px;
   margin: 0px auto;
   padding: 30px;
+  /* overflow: hidden; */
+  position: relative;
+  z-index: 3500;
 }
 
 .close-btn:hover {
