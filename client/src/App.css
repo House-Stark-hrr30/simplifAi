@@ -47,8 +47,16 @@ table {
 }
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 
 /* -------------------------- */
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
 
 html, body {
   font-family: 'Raleway', sans-serif;
@@ -56,29 +64,111 @@ html, body {
   height: 100%;
 }
 
-a {
-  text-decoration: none;
-  outline: none;
+html {
+  font-size: 62.5%;
 }
 
-a:visited {
-  text-decoration: none;
-  color: white;
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
 }
-
-.footer {
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  overflow: hidden;
-  background-color: rgba(44, 16, 35, 0.575);
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  color: #fff;
-  text-align: center;
-  padding: 15px 5px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+}
+
+/* from CSS course by Jonas Schmedtmann */
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
+
+/* to keep correct spacing */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
 }
