@@ -5,5 +5,6 @@ const PORT = process.env.SERVER_PORT || 3000;
 
 // start the server
 app.listen(PORT, () => {
+  console.log(`${(new Date()).toLocaleTimeString("en-US")}`)
   console.log(`See the magic on port ${PORT}!`)
 });

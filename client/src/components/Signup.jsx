@@ -84,7 +84,7 @@ class Signup extends Component {
           <button
             type="button"
             className="signup-btn"
-            onClick={this.sendInfo} 
+            onClick={this.sendInfo.bind(this)} 
           >
             Sign Up
           </button>

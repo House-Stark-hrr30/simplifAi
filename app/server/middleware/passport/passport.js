@@ -4,7 +4,7 @@ import passport from 'passport';
 // === import local files
 import LocalStrategy from './localStrat';
 // import GoogleStrategy from './googleStrat';
-import User from '../../../database/models/user'; //todo: verify db route here and in both strategy files
+import User from '../../../database/models/user';
 
 passport.serializeUser((user, done) => {
 	console.log('=== serialize ... called ===');

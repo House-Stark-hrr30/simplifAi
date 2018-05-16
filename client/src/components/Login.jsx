@@ -40,7 +40,7 @@ class Login extends Component {
         this.setState({
           failedLogin: 'Incorrect username or password.'
         })
-        throw err; 
+        console.log(err); 
       });
   }
 
@@ -75,7 +75,7 @@ class Login extends Component {
           <button
             type="button"
             className="login-btn"
-            onClick={this.sendLogin}
+            onClick={this.sendLogin.bind(this)}
           >
             Login
           </button>

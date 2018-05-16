@@ -30,7 +30,7 @@ user.post('/signup', [
     // check for errors
     const errs = validationResult(req);
     if (!errs.isEmpty()) {
-      return res.status(422).json({errors: errs.array()});
+      res.status(422).json({errors: errs.array()});
     }
     // if no errors
     const user = {};
@@ -39,16 +39,32 @@ user.post('/signup', [
     user.first_name = req.body.firstName;
     user.last_name = req.body.lastName;
 
-    return db.createUser(user)
-      .then(user => console.log(user))
-      .catch(err => console.log(err));
+    db.createUser(user)
+      .then(user => {
+        console.log(user)
+        res.status(200);
+        res.end(user);
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(400);
+        res.end("No user found with those credentials. Please try again!");
+      });
 });
 
 // === sign in existing user ===
 user.post('/login', (req, res) => {
   db.fetchUser(req.body)
-    .then(user => console.log(user))
-    .catch(err => console.log(err));
+    .then(user => {
+      console.log(user)
+      res.status(200);
+      res.end(user);
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(400);
+      res.end("No user found with those credentials. Please try again!");
+    });
 });
 
 export default user;
