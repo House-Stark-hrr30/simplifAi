@@ -14,11 +14,24 @@ class SpreadsheetTable extends Component {
   }
 
   getSpreadsheetHeaderData() {
+    console.log('getSpreadsheetHeaderData....');
+    console.log(this.props.spreadSheetData.slice(0, 1)[0]);
     var headerArray = this.props.spreadSheetData.slice(0, 1)[0];
     var headerArrayTable = [];
     if(headerArray) {
       for(var i = 0; i < headerArray.length; i++) {
-        headerArrayTable.push({ title: headerArray[i], dataIndex:headerArray[i], key: headerArray[i], width: 100});
+        headerArrayTable.push({
+          title: headerArray[i],
+          dataIndex:headerArray[i],
+          key: headerArray[i],
+          width: 100,
+          onCell: record => ({
+            onClick(e) {
+              console.log('Click cell', record);
+            },
+          })
+
+        });
       }
     }
 
@@ -43,10 +56,39 @@ class SpreadsheetTable extends Component {
 
   }
 
+  //triggers modal for adding a column
+  addColumn(record, index) {
+    console.log('Entered addColumn....');
+    console.log(record);
+    console.log(index);
+    this.props.toggleModal('addColumn');
+  }
+
+  //triggers modal for adding a row
+  addRow(record, index) {
+    console.log('Entered addRow....');
+    console.log(record);
+    console.log(index);
+    this.props.toggleModal('addRow');
+  }
+
   render() {
     return (
       <div>
-        <Table columns={this.getSpreadsheetHeaderData()} scroll={{ x: 650, y: 200 }} data={this.getSpreadsheetBodyData()} style={{ width: 725 }} />
+        <button onClick={this.addColumn.bind(this)}>Add Column</button>
+        <button onClick={this.addRow.bind(this)}>Add Row</button>
+        <Table
+          columns={this.getSpreadsheetHeaderData()}
+          scroll={{ x: 650, y: 200 }}
+          data={this.getSpreadsheetBodyData()}
+          style={{ width: 725 }}
+          onHeaderRow={(record, index) => ({
+            onClick: this.addColumn.bind(this, record, index)
+          })}
+          onRow={(record, index) => ({
+            onClick: this.addRow.bind(this, record, index)
+          })}
+        />
       </div>
 
     );

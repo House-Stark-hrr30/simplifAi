@@ -14,14 +14,14 @@ class Modal extends React.Component {
       <div className="backdrop">
         <div className="modal">
 
-          <button 
+          <button
             className="close-btn"
             onClick={this.props.onClose}
           >
             X
           </button>
 
-          <Login />
+          {this.props.component}
 
         </div>
       </div>

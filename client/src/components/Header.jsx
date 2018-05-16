@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <header className="header">
       <div className="header-content">
-        
+
         <Link to="/" className="header-menu-home"
           ><p> Home </p>
         </Link>
@@ -23,11 +23,11 @@ const Header = (props) => {
         </div>
 
         <div className="logo">
-          <img 
-            src={wolf} 
-            alt="logo" 
-            className="logo-pic" 
-            onClick={props.toggleModal}
+          <img
+            src={wolf}
+            alt="logo"
+            className="logo-pic"
+            onClick={() => {props.toggleModal('login')}}
           />
         </div>
 
