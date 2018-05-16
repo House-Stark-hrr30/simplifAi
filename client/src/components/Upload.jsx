@@ -73,7 +73,7 @@ class Upload extends Component {
   //Imports user's google sheet upon import button click
   handleImportClick() {
     console.log('Entered handleImportClick....');
-    axios.get('http://localhost:3000/getSpreadsheetData', {
+    axios.get('data/getGSheet', {
       params: {
         googleSheetID: this.state.googleSheetID
       }

@@ -33,7 +33,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Header
           toggleModal={this.toggleModal}
         />
@@ -46,11 +45,8 @@ class App extends Component {
           show={this.state.isOpen}
           onClose={this.toggleModal}
           component={this.state.currentModal}
-        >
-        </Modal>
-
+        />
       </div>
-
     );
   }
 }

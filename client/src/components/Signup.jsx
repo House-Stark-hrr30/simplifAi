@@ -21,17 +21,12 @@ class Signup extends Component {
   }
 
   sendInfo() { 
-    axios.post('localhost:3000/api/signup', this.state)
-      .then((data) => {
-        this.setState({
-          status: true
-        });
+    axios.post('/user/signup', this.state)
+      .then((res) => {
+        console.log(res)
       })
-      
-      .catch(() => {
-        this.setState({
-          status: false
-        })
+      .catch((err) => {
+        console.log(err);
       })
   }
 
@@ -49,7 +44,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="Signup">
-        <form action="localhost:3000/api/signup" method="post">
+        <form>
           <div>
             <label>First Name:</label>
             <input
@@ -86,7 +81,11 @@ class Signup extends Component {
             />
           </div>
          
-          <button type="submit" className="signup-btn">
+          <button
+            type="button"
+            className="signup-btn"
+            onClick={this.sendInfo.bind(this)} 
+          >
             Sign Up
           </button>
           

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom'
+
 import Signup from './Signup.jsx';
 import './Login.css';
 
@@ -28,15 +30,19 @@ class Login extends Component {
     })
   }
 
-  // sendLogin(e) {
-  //   axios.post('localhost:3000/api/login', this.state)
-  //     .catch((err) => {
-  //       this.setState({
-  //         failedLogin: 'Incorrect username or password.'
-  //       })
-  //       throw err; 
-  //     });
-  // }
+  sendLogin(e) {
+    axios.post('/user/login', this.state)
+      .then(user => {
+        // this.props.history.push('/aboutUs'); //! uncomment this when request is verified
+        console.log(user)
+      })
+      .catch((err) => {
+        this.setState({
+          failedLogin: 'Incorrect username or password.'
+        })
+        console.log(err); 
+      });
+  }
 
   render() {
     if (this.state.signupClick) {
@@ -47,7 +53,7 @@ class Login extends Component {
 
     return (
       <div className="Login">
-        <form action="localhost:3000/api/login" method="post">
+        <form>
           <div>
             <label>Username:</label>
             <input
@@ -66,7 +72,11 @@ class Login extends Component {
             />
           </div>
          
-          <button type="submit" className="login-btn">
+          <button
+            type="button"
+            className="login-btn"
+            onClick={this.sendLogin.bind(this)}
+          >
             Login
           </button>
 
@@ -84,4 +94,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);
