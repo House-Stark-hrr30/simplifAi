@@ -15,4 +15,10 @@ data.get('/getGSheet', (req, res) => {
   googleHelpers.getSpreadsheetData(res, req.query.googleSheetID);
 });
 
+data.post('/saveDataStore', (req, res) => {
+  res.status(404).end("this route isn't set up yet");
+});
+
+
+
 export default data;

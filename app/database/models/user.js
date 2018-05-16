@@ -26,6 +26,7 @@ export default function (sequelize, DataTypes) {
       validate: {
         isEmail: true,
         notNull: true,
+        unique: true
       }
     },
     password: {

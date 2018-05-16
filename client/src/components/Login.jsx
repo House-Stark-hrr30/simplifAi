@@ -47,7 +47,7 @@ class Login extends Component {
 
     return (
       <div className="Login">
-        <form action="/api/login" method="post">
+        <form action="/user/login" method="post">
           <div>
             <label>Username:</label>
             <input
