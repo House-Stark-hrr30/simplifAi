@@ -10,7 +10,7 @@ const path = require('path');
 
 function getSpreadsheetData(res, googleSheetID) {
   // Load client secrets from a local file.
-  fs.readFile(__dirname + '../../client_secret.json', (err, content) => {
+  fs.readFile(path.join(__dirname, '../../database/config/client_secret.json'), (err, content) => {
     console.log('Entered readFile....');
     if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Sheets API.

@@ -3,25 +3,60 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './Home.jsx';
 import Upload from './Upload.jsx';
 import About from './About.jsx';
+import Chart from './Chart.jsx';
 
-const Body = (props) => {
-  return (
-    <Switch>
-      <Route
-        exact path='/'
-        component={ Home }
-      />
+class Body extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: ''
+    }
+  }
 
-      <Route
-        path='/upload'
-        component={ Upload }
-      />
+  componentDidUpdate() {
+    // console.log(typeof this.state.data);
+    // console.log(this.state.data);
+  }
 
-      <Route path='/about'
-        component={ About }
-      />
-    </Switch>
-  );
+  updateState(key) {
+    let context = this;
+    return (value, cb) => {
+      // console.log(value);
+      context.setState({
+        [key]: value
+      }, cb);
+    }
+  }
+
+  render() {
+    return (
+
+      <Switch>
+        <Route
+          exact path='/'
+          component={ Home }
+        />
+
+        <Route
+          path='/upload'
+          render={ () => {
+            return (<Upload updateData={this.updateState('data')} data={this.state.data} />)
+          } }
+        />
+
+        <Route path='/about'
+          component={ About }
+        />
+
+        <Route path='/chart'
+          render={ () => {
+            return (<Chart data={this.state.data} />)
+          } }
+        />
+
+      </Switch>
+    );
+  }
 }
 
 export default Body;

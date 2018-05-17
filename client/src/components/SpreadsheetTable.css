@@ -6,8 +6,8 @@
 }
 
 .rc-table th {
-  background-color: rgba(44, 16, 35, 0.575);
-  color: white;
+  background-color: #f3a933;
+  color: #333;
   font: inherit;
   font-size: 16px;
   font-family: Raleway;
