@@ -4,11 +4,14 @@ import { Router } from 'express';
 // import local files
 import { authRequired } from '../helpers/authHelpers';
 
+// import goggle helpers
+import googleHelpers from '../helpers/googleHelpers'
+
 // initialize express router
 const data = Router();
 
 //use passport authentication for this route
-data.use(authRequired("Authentication not found"));
+//data.use(authRequired("Authentication not found"));
 
 // Gets data from Google spreadsheets
 // Note the response is passed in as an argument in googleHelpers.getSpreadsheetData

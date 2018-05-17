@@ -6,6 +6,7 @@ import Modal from './Modal';
 import Login from './Login';
 import AddColumn from './AddColumn';
 import AddRow from './AddRow';
+import {withRouter} from 'react-router-dom';
 
 class Upload extends Component {
   constructor(props) {
@@ -80,18 +81,17 @@ class Upload extends Component {
       })
 
       .then((res) => {
-        this.setState({
-          spreadSheetData: res.data
+        let data = res.data.map((row) => {
+          return [...row];
         });
+        this.setState({
+          spreadSheetData: data
+        }, () => { console.log(data)});
         this.convertSpreadSheetDataToArrayOfObjects();
       })
       .catch(() => {
         console.log("Error!!!");
       });
-  }
-
-  handleSubmitClick() {
-    console.log('Entered handleSubmitClick....');
   }
 
   //Adds data to last column that has a header based on user input
@@ -164,6 +164,13 @@ class Upload extends Component {
 
   }
 
+  sendDataToChart() {
+    let data = this.state.spreadSheetData;
+    this.props.updateData(data, () => {
+      this.props.history.push('/chart');
+    });
+  }
+
   render() {
 
     return (
@@ -184,7 +191,7 @@ class Upload extends Component {
             <div>
               <input className="spreadsheet-input" type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
               <button type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
-              <button type="button" className="submit" onClick={this.handleSubmitClick.bind(this)}>Submit</button>
+              <button type="button" className="submit" onClick={this.sendDataToChart.bind(this)}>Submit</button>
               </div>
               <div>
                 <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal.bind(this)}/>
@@ -207,4 +214,4 @@ class Upload extends Component {
   }
 };
 
-export default Upload;
+export default withRouter(Upload);
