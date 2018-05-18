@@ -9,7 +9,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: '',
       // failedLogin: '',
       signupClick: false
@@ -19,9 +19,7 @@ class Login extends Component {
 
   updateInfo(e) {
     this.setState({
-      [e.target.name]: e.target.value,
-      // failedLogin: ''
-    });
+      [e.target.name]: e.target.value});
   }
 
   signupToggle() {
@@ -33,8 +31,8 @@ class Login extends Component {
   sendLogin(e) {
     axios.post('/user/login', this.state)
       .then(user => {
-        // this.props.history.push('/aboutUs'); //! uncomment this when request is verified
-        console.log(user)
+        this.props.history.push('/'); //! uncomment this when request is verified
+        console.log(user);
       })
       .catch((err) => {
         this.setState({
@@ -55,11 +53,12 @@ class Login extends Component {
       <div className="Login">
         <form>
           <div>
-            <label>Username:</label>
+            <label>Email:</label>
             <input
               type="text"
               id="login_username"
-              name="login_user_username"
+              name="email"
+              onChange={this.updateInfo.bind(this)}
             />
           </div>
 
@@ -68,7 +67,8 @@ class Login extends Component {
             <input 
               type="password" 
               id="login_password" 
-              name="login_user_password" 
+              name="password"
+              onChange={this.updateInfo.bind(this)}
             />
           </div>
          
@@ -86,9 +86,7 @@ class Login extends Component {
           >
             Sign Up
           </button>
-
         </form>
-
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import axios from 'axios';
 import './Signup.css';
 
@@ -8,7 +9,7 @@ class Signup extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      username: '',
+      email: '',
       password: '',
       status: undefined
     };
@@ -24,10 +25,13 @@ class Signup extends Component {
     axios.post('/user/signup', this.state)
       .then((res) => {
         console.log(res)
+        this.setState({status: true});
+        this.props.history.push('/aboutUs'); //! uncomment this when request is verified
       })
       .catch((err) => {
         console.log(err);
-      })
+        this.setState({status: false});
+      });
   }
 
   renderStatus() {
@@ -50,7 +54,8 @@ class Signup extends Component {
             <input
               type="text"
               id="firstName"
-              name="user_firstName"
+              name="firstName"
+              onChange={this.updateInfo.bind(this)}
             />
           </div>
 
@@ -59,16 +64,18 @@ class Signup extends Component {
             <input
               type="text"
               id="lastName"
-              name="user_lastName"
+              name="lastName"
+              onChange={this.updateInfo.bind(this)}
             />
           </div>
 
           <div>
-            <label>Username:</label>
+            <label>Email:</label>
             <input
               type="text"
               id="signup_username"
-              name="signu_user_username"
+              name="email"
+              onChange={this.updateInfo.bind(this)}
             />
           </div>
 
@@ -77,7 +84,8 @@ class Signup extends Component {
             <input 
               type="password" 
               id="signup_password" 
-              name="signup_user_password" 
+              name="password"
+              onChange={this.updateInfo.bind(this)} 
             />
           </div>
          
@@ -96,4 +104,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default withRouter(Signup);

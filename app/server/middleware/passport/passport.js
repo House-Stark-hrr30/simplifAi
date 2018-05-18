@@ -2,7 +2,7 @@
 import passport from 'passport';
 
 // === import local files
-import LocalStrategy from './localStrat';
+import local from './localStrat';
 // import GoogleStrategy from './googleStrat';
 import User from '../../../database/models/user';
 
@@ -28,7 +28,7 @@ passport.deserializeUser((id, done) => {
 });
 
 // ==== Register Strategies ====
-passport.use(LocalStrategy);
+passport.use(local);
 // passport.use(GoogleStratgey);
 
 export default passport;

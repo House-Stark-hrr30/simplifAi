@@ -11,28 +11,28 @@ export default function (sequelize, DataTypes) {
     },
     first_name: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        notNull: true,
       }
     },
     last_name: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        notNull: true,
       }
     },
     email: {
       type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
       validate: {
         isEmail: true,
-        notNull: true,
-        unique: true
       }
     },
     password: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        notNull: true,
         len: [8, 75]
       }
     },
@@ -45,7 +45,7 @@ export default function (sequelize, DataTypes) {
         }
       },
       instanceMethods: {
-        isValidPassword(password) {
+        checkPassword(password) {
           return bcrypt.compare(password, this.password);
         }
       }
