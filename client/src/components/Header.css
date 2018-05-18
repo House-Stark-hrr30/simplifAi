@@ -1,14 +1,21 @@
 .header {
-  box-sizing: border-box;
-  overflow: hidden;
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
   /* background-color: rgba(44, 16, 35, 0.575); */
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   color: rgb(20, 7, 7);
-  /* position: relative; */
+  position: relative;
+  /* visibility: hidden; */
+  /* display: block; */
   /* position: fixed; */
-  position: sticky;
+  /* top: -25px; */
+  /* display: inline-block; */
+  /* position: sticky; */
+  /* margin-top: -82px; */
+  /* padding-bottom: 82px;  */
+  /* padding-top: 82px; */
   border-bottom: 3px solid #f3a803;
 }
 
@@ -20,6 +27,8 @@
   grid-template-columns: repeat(12, 1fr);
   /* grid-auto-rows: minmax(80px, auto); */
   grid-template-rows: 1fr;
+  /* position: fixed;
+  overflow: hidden; */
 }
 
 .header-menu-home {

@@ -8,7 +8,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="home">
         <div className="section-about">
             <div className="center-text margin-bottom-big">
                 <h2 className="heading-main">

@@ -48,7 +48,7 @@
   margin-right: 1.5rem;
 }
 
-.footer__contact:hover, .footer__contact:active {
+.footer__contact:hover {
   text-decoration: underline;
 }
 
