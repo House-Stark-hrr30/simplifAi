@@ -17,7 +17,7 @@ class App extends Component {
     this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal = (view) => {
+  toggleModal (view) {
     if(view != null) {
       const views = {
         'login': <Login />
