@@ -13,7 +13,7 @@ class Home extends Component {
             <div className="center-text margin-bottom-big">
                 <h2 className="heading-main">
                     Welcome to simplifAi
-                    <p> Your data's important to us -- find out what it has to say </p>
+                    <p> Your data's important -- find out what it has to say </p>
                 </h2>
             </div>
 
@@ -30,7 +30,7 @@ class Home extends Component {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
                     </p>
 
-                    
+
                 </div>
                 <div>
                     <div className="home-composition">
@@ -38,7 +38,7 @@ class Home extends Component {
                         <img alt="Photo 1"
                             className="home-composition__photo home-composition__photo--p1"
                             src="img/office_2.jpeg"/>
-                       
+
                     </div>
                 </div>
             </div>
@@ -47,11 +47,11 @@ class Home extends Component {
         <div className="section-features">
 
             <div className="section-features__bg">
-                
+
                 <img className="section-features__bg__pic" src="img/data.jpg" alt="data">
                 </img>
             </div>
-            
+
             <div className="row">
                 <div className="col-1-of-4">
                     <div className="feature-box">
@@ -91,11 +91,11 @@ class Home extends Component {
             </div>
         </div>
 
-        
+
 
         <section className="section-stories">
             <div className="section-stories__bg">
-                
+
                 <img className="section-stories__bg__pic" src="img/abstract_ai.jpg" alt="bulb">
                 </img>
             </div>
@@ -142,7 +142,7 @@ class Home extends Component {
 
         </section>
 
-        
+
       </div>
     );
   }

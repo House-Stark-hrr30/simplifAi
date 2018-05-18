@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './AddRow.css';
 
 class AddRow extends Component {
   constructor(props) {
@@ -18,12 +19,18 @@ class AddRow extends Component {
 
   }
 
+  componentDidMount(){
+    document.getElementById('add-row').focus();
+  }
+
   render() {
     return(
       <div>
         <h2>Add Row</h2>
+        <span>Enter data is this format:</span><br/>
+        <span>data1, data2, data3...</span>
         <input id="add-row" className="spreadsheet-input" type="text" placeholder="Enter Row Data"></input>
-        <button onClick={this.handleAddRowClick.bind(this)}>Row</button>
+        <button onClick={this.handleAddRowClick.bind(this)}>Add Row</button>
       </div>
       )
   }

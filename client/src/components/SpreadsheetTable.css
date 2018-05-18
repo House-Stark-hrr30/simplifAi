@@ -1,7 +1,7 @@
 
 
 .rc-table {
-  margin-top: 20px;
+  margin-top: 2%;
   border: 1px solid #ccc;
 }
 
@@ -26,4 +26,17 @@
 
 .rc-table tr:hover {
   background: #eee;
+}
+
+.content-inside .add-col-btn {
+  width: 7em;
+  margin-right: 2%;
+}
+
+.content-inside .add-row-btn {
+  width: 7em;
+}
+
+.table-area {
+  margin-top: 3%;
 }
