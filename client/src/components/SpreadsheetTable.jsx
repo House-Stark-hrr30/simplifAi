@@ -74,9 +74,9 @@ class SpreadsheetTable extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.addColumn.bind(this)}>Add Column</button>
-        <button onClick={this.addRow.bind(this)}>Add Row</button>
+      <div className="table-area">
+        <button className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
+        <button className="add-row-btn" onClick={this.addRow.bind(this)}>Add Row</button>
         <Table
           columns={this.getSpreadsheetHeaderData()}
           scroll={{ x: 650, y: 200 }}

@@ -1,0 +1,14 @@
+
+.Upload .modal {
+  font-size: 12px;
+}
+
+.Upload .modal h2{
+  text-align: center;
+}
+
+.Upload .modal .close-btn {
+  background: #f9dfe5;
+  width: 2em;
+}
+

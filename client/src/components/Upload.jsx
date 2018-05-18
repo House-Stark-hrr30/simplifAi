@@ -172,26 +172,27 @@ class Upload extends Component {
   }
 
   render() {
-
     return (
       <div className="Upload">
 
         <div className="grid__item">
           <div className="content">
             <div className="content-inside">
-              <h2>Machine Learning</h2>
-              <p>Submit data to get started!</p>
+              <h2 className="heading-main">Machine Learning</h2>
+              <p className="heading-sub">Submit data to get started!</p>
             </div>
           </div>
         </div>
 
-        <div className="grid__item">
+        <div className="grid__item table-section">
           <div className="content">
             <div className="content-inside">
             <div>
-              <input className="spreadsheet-input" type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
+              <div className="spreadsheet-input-div">
+                <input className="spreadsheet-input" type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
+              </div>
               <button type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
-              <button type="button" className="submit" onClick={this.sendDataToChart.bind(this)}>Submit</button>
+              <button type="button" className="submit" disabled={this.state.spreadSheetData.length === 0} onClick={this.sendDataToChart.bind(this)}>Submit</button>
               </div>
               <div>
                 <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal.bind(this)}/>

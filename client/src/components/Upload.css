@@ -45,7 +45,7 @@
 }
 
 .grid__item:nth-child(1) h2 {
-  font-size: 1.5em;
+
 }
 
 .grid__item:nth-child(2) {
@@ -176,4 +176,29 @@ grid_item .content-inside {
 
 .import {
   margin-right: 54%;
+}
+
+.heading-main {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: .2rem;
+  font-family: Raleway, sans-serif;
+}
+
+.heading-sub {
+  font-size: 2rem;
+}
+
+.table-section {
+  margin-top: 8%;
+}
+
+.spreadsheet-input-div {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.submit[disabled]:hover {
+  cursor: not-allowed;
 }
