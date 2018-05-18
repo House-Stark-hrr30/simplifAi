@@ -6,9 +6,6 @@ import { authRequired } from '../helpers/authHelpers';
 import googleHelpers from '../helpers/googleHelpers.js';
 import passport from '../middleware/passport/passport';
 
-// import goggle helpers
-import googleHelpers from '../helpers/googleHelpers'
-
 // initialize express router
 const data = Router();
 
