@@ -8,6 +8,19 @@ class Dashboard extends Component {
     super(props);
   }
 
+  createCard() {
+    return (
+        <div className="col">
+            <div className="feature-box">
+                <h3 className="heading-tertiary margin-bottom-small">Versatile support</h3>
+                <p className="feature-box__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                </p>
+            </div>
+        </div>
+    );
+  }
+
   render() {
     return (
       <div>
@@ -25,66 +38,40 @@ class Dashboard extends Component {
                 </h2>
             </div>
 
-            <Link to="/upload">
-                <div className="button">
-                    <button type="button" className="upload-btn"> Upload </button>
-                </div>
-            </Link>
-
             <div className="grid">
-                <div className="col">
-                    <div className="feature-box">
-                        <h3 className="heading-tertiary margin-bottom-small">Explore your data</h3>
-                        <p className="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="col">
-                    <div className="feature-box">
-                        <h3 className="heading-tertiary margin-bottom-small">Save time</h3>
-                        <p className="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="col">
-                    <div className="feature-box">
-                        <h3 className="heading-tertiary margin-bottom-small">Combine your data</h3>
+                <Link to="/upload">
+                    <div className="col">
+                        <div className="feature-box">
+                            <h3 className="heading-tertiary margin-bottom-small">Upload</h3>
                             <p className="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                        </p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </Link>
 
-                <div className="col">
-                    <div className="feature-box">
-                        <h3 className="heading-tertiary margin-bottom-small">Versatile support</h3>
-                        <p className="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                        </p>
+                <Link to="/machinelearning">
+                    <div className="col">
+                        <div className="feature-box">
+                            <h3 className="heading-tertiary margin-bottom-small">Machine Learning</h3>
+                            <p className="feature-box__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </Link>
 
-                <div className="col">
-                    <div className="feature-box">
-                        <h3 className="heading-tertiary margin-bottom-small">test</h3>
-                        <p className="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                        </p>
+                <Link to="/datatypes">
+                    <div className="col">
+                        <div className="feature-box">
+                            <h3 className="heading-tertiary margin-bottom-small">Data Types</h3>
+                                <p className="feature-box__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </Link>
 
-                <div className="col">
-                    <div className="feature-box">
-                        <h3 className="heading-tertiary margin-bottom-small">Versatile support</h3>
-                        <p className="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
       </div>
