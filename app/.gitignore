@@ -30,3 +30,7 @@ database/config/config.json
 # see example files for file structure
 client_secret.json
 credentials.json
+
+.todo
+
+googleKeys.js

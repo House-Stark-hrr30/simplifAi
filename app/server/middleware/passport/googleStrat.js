@@ -1,14 +1,15 @@
 //import modules
-import { OAuth2Strategy as GoogleStrategy } from 'passport-google-oauth'
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
 // import local files
 import User from '../../../database/models/user'; //todo: verify db route
+import { googleClientSecret, googleClientID } from './googleKeys';
 
 
 const strategy = new GoogleStrategy(
 	{
-		clientID: process.env.GOOGLE_CLIENT_ID,
-		clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+		clientID: googleClientID,
+		clientSecret: googleClientSecret,
 		callbackURL: '/auth/google/callback'
 	},
 	function(token, tokenSecret, profile, done) {

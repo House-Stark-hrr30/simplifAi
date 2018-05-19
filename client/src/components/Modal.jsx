@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Login from './Login.jsx';
 import './Modal.css';
 
 class Modal extends React.Component {
@@ -16,7 +15,7 @@ class Modal extends React.Component {
 
           <button
             className="close-btn"
-            onClick={this.props.onClose}
+            onClick={() => this.props.closeModal(null)}
           >
             X
           </button>
