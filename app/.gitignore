@@ -31,6 +31,10 @@ database/config/config.json
 client_secret.json
 credentials.json
 
+<<<<<<< HEAD
+../.vscode
+=======
 .todo
 
 googleKeys.js
+>>>>>>> 62f2b6c37dfe66d36c95ee1ce2e9b9660ad05420

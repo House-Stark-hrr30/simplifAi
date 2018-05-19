@@ -4,6 +4,7 @@ import Home from './Home.jsx';
 import Upload from './Upload.jsx';
 import About from './About.jsx';
 import Chart from './Chart.jsx';
+import Dashboard from './Dashboard.jsx';
 
 class Body extends React.Component {
   constructor(props) {
@@ -52,6 +53,10 @@ class Body extends React.Component {
           render={ () => {
             return (<Chart data={this.state.data} />)
           } }
+        />
+
+        <Route path='/dashboard'
+          component={ Dashboard }
         />
 
       </Switch>

@@ -11,15 +11,15 @@ const Header = (props) => {
         <Link to="/" className="header-menu-home"
           ><p> Home </p>
         </Link>
-        <Link to="/upload" className="header-menu-upload">
-          <p> Upload </p>
+        <Link to="/dashboard" className="header-menu-upload">
+          <p> Dashboard </p>
         </Link>
         <Link to="/about" className="header-menu-about">
           <p> About Us </p>
         </Link>
 
         <div className="title">
-          simplifAi
+          SimplifAi
         </div>
 
         <div className="logo">
