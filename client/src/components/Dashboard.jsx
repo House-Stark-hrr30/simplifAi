@@ -23,6 +23,10 @@ class Dashboard extends Component {
                 </h2>
             </div>
 
+            <div className="button">
+                <button type="button" className="upload-btn"> Upload </button>
+            </div>
+
             <div className="grid">
                 <div className="col">
                     <div className="feature-box">

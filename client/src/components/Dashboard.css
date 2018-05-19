@@ -95,3 +95,25 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: .2em; */
 }
+
+.button {
+  display: block;
+}
+
+.upload-btn {
+  border-radius: 20%;
+  outline: 0;
+  width: 5em;
+  height: 2em;
+  font-family: Raleway;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.upload-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}

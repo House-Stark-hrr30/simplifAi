@@ -19,7 +19,7 @@ const Header = (props) => {
         </Link>
 
         <div className="title">
-          simplifAi
+          SimplifAi
         </div>
 
         <div className="logo">

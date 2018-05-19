@@ -12,14 +12,14 @@ class Home extends Component {
         <div className="section-about">
             <div className="center-text margin-bottom-big">
                 <h2 className="heading-main">
-                    Welcome to simplifAi
+                    Welcome to SimplifAi
                     <p> Your data's important -- find out what it has to say </p>
                 </h2>
             </div>
 
             <div className="row">
                 <div className="col-1-of-2">
-                    <h3 className="heading-tertiary margin-bottom-small">Use simplifAi to simplify your life</h3>
+                    <h3 className="heading-tertiary margin-bottom-small">Use SimplifAi to simplify your life</h3>
                     <p className="paragraph">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
                         ducimus quam nisi exercitationem omnis earum qui.
@@ -102,7 +102,7 @@ class Home extends Component {
 
             <div className="center-text margin-bottom-big">
                 <h2 className="heading-secondary">
-                    See what people are saying about simplifAi
+                    See what people are saying about SimplifAi
                 </h2>
             </div>
 
@@ -113,7 +113,7 @@ class Home extends Component {
                         <figcaption className="story__caption">Cody Daig</figcaption>
                     </figure>
                     <div className="story__text">
-                        <h3 className="heading-tertiary margin-bottom-small">I had a great time using simplifAi</h3>
+                        <h3 className="heading-tertiary margin-bottom-small">I had a great time using SimplifAi</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
                             ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
@@ -130,7 +130,7 @@ class Home extends Component {
                         <figcaption className="story__caption">Ralph Plumley</figcaption>
                     </figure>
                     <div className="story__text">
-                        <h3 className="heading-tertiary margin-bottom-small">simplifAi really changed my life</h3>
+                        <h3 className="heading-tertiary margin-bottom-small">SimplifAi really changed my life</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
                             ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero

@@ -12,7 +12,7 @@ class About extends Component {
         <div className="section-about">
             <div className="center-text margin-bottom-big">
                 <h1 className="heading-main">
-                    Meet the team behind simplifAi
+                    Meet the team behind SimplifAi
                 </h1>
             </div>
 
