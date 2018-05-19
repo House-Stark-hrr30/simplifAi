@@ -11,7 +11,7 @@ const Header = (props) => {
         <Link to="/" className="header-menu-home"
           ><p> Home </p>
         </Link>
-        <Link to="/upload" className="header-menu-upload">
+        <Link to="/dashboard" className="header-menu-upload">
           <p> Upload </p>
         </Link>
         <Link to="/about" className="header-menu-about">

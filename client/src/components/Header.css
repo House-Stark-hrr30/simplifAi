@@ -24,7 +24,8 @@
   letter-spacing: 2px;
   line-height: 40px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-columns: repeat(12, 1fr); */
+  grid-template-columns: repeat(12, minmax(max-content, 8.333%));
   /* grid-auto-rows: minmax(80px, auto); */
   grid-template-rows: 1fr;
   /* position: fixed;
@@ -44,7 +45,7 @@
 .header-menu-about {
   grid-column-start: 3;
   grid-column-end: 4;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   white-space: nowrap;
 }
 
