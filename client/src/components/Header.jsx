@@ -12,7 +12,7 @@ const Header = (props) => {
           ><p> Home </p>
         </Link>
         <Link to="/dashboard" className="header-menu-upload">
-          <p> Upload </p>
+          <p> Dashboard </p>
         </Link>
         <Link to="/about" className="header-menu-about">
           <p> About Us </p>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
+import Upload from './Upload.jsx';
+import {Link} from 'react-router-dom';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -23,9 +25,11 @@ class Dashboard extends Component {
                 </h2>
             </div>
 
-            <div className="button">
-                <button type="button" className="upload-btn"> Upload </button>
-            </div>
+            <Link to="/upload">
+                <div className="button">
+                    <button type="button" className="upload-btn"> Upload </button>
+                </div>
+            </Link>
 
             <div className="grid">
                 <div className="col">
