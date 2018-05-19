@@ -106,8 +106,8 @@ class Upload extends Component {
     var spreadSheetData = this.state.spreadSheetData;
 
     if(spreadSheetData[1]) {
-      for(var j = 0; j < formattedNewColumnData.length; j++) {
-        for(var i = 1; i < spreadSheetData.length; i++) {
+      for(let j = 0; j < formattedNewColumnData.length; j++) {
+        for(let i = 1; i < spreadSheetData.length; i++) {
           if(spreadSheetData[i].length < spreadSheetData[i - 1].length) {
             spreadSheetData[i].push(formattedNewColumnData[j]);
             i = spreadSheetData.length;
@@ -115,7 +115,7 @@ class Upload extends Component {
         }
       }
     } else {
-      for(var i = 0; i < formattedNewColumnData.length; i++) {
+      for(let i = 0; i < formattedNewColumnData.length; i++) {
         spreadSheetData.push([formattedNewColumnData[i]]);
       }
     }

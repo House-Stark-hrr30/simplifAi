@@ -2,33 +2,31 @@
 import passport from 'passport';
 
 // === import local files
-import LocalStrategy from './localStrat';
-// import GoogleStrategy from './googleStrat';
-import User from '../../../database/models/user';
+import local from './localStrat';
+import GoogleStrategy from './googleStrat';
+import db from '../../../database/helpers/userHelpers';
 
 passport.serializeUser((user, done) => {
 	console.log('=== serialize ... called ===');
 	console.log(user); // raw user object
 	console.log('---------');
-	done(null, { _id: user._id });
+	done(null, user.user_id);
 });
 
-passport.deserializeUser((id, done) => {
-	console.log('DEserialize ... called');
-	User.findOne(
-		{ _id: id },
-		'firstName lastName photos local.username',
-		(err, user) => {
+passport.deserializeUser((user, done) => {
+	console.log('Deserialize ... called');
+	db.fetchUser(user)
+		.then((err, user) => {
 			console.log('======= DESERILAIZE USER CALLED ======')
 			console.log(user)
 			console.log('--------------')
-			done(null, user)
+			done(err, user)
 		}
 	);
 });
 
 // ==== Register Strategies ====
-passport.use(LocalStrategy);
-// passport.use(GoogleStratgey);
+passport.use(local);
+passport.use(GoogleStrategy);
 
 export default passport;

@@ -27,7 +27,7 @@ const Header = (props) => {
             src={wolf}
             alt="logo"
             className="logo-pic"
-            onClick={() => {props.toggleModal('login')}}
+            onClick={() => props.toggleModal('login')}
           />
         </div>
 

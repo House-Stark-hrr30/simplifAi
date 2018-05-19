@@ -14,7 +14,6 @@ import morgan from 'morgan';
 import path from 'path';
 
 // === import local files
-import googleHelpers from './helpers/googleHelpers.js';
 import morganConfig from './middleware/morgan';
 import sessionConfig from './middleware/sessions';
 import passport from './middleware/passport/passport';
@@ -37,6 +36,7 @@ app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
+app.disable('x-powered-by');
 
 // === initialize sessions and authentication
 app.use(session(sessionConfig));
@@ -47,7 +47,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, '../../client/build')));
 
 // === direct app to use routes set in routes folder
-app.use('/user', user);
+app.use('/user', (req, res, next) => {console.log("Entering user route..."); next()}, user);
 app.use('/data', data);
 
 

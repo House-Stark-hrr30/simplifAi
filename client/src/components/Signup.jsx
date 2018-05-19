@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import axios from 'axios';
 import './Signup.css';
 
@@ -6,37 +7,50 @@ class Signup extends Component {
   constructor(props) {
     super(props);   
     this.state = {
-      firstName: '',
-      lastName: '',
-      username: '',
-      password: '',
-      status: undefined
+      credentials: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+      },
+        status: undefined
     };
   }
 
-  updateInfo(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
+  updateInfo(key) {
+    const ctx = this;
+    return (e) => {
+      const creds = Object.assign({}, ctx.state.credentials);
+      creds[key] = e.target.value;
+      ctx.setState({
+        credentials: creds
+      });
+    }
   }
 
   sendInfo() { 
     axios.post('/user/signup', this.state)
-      .then((res) => {
-        console.log(res)
+      .then(user => {
+        console.log(user);
+        this.props.toggleModal(null, () => this.props.history.push('/about'));
       })
       .catch((err) => {
         console.log(err);
-      })
+        this.setState({status: false});
+      });
   }
 
   renderStatus() {
     if (this.state.status !== undefined) {
       if (this.state.status) {
-        return <span style={{color: `#27AE60`}}>Your account was successfully created!</span>
+        return <span style={{color: `#27AE60`}}>
+          Your account was successfully created!
+        </span>
       
       } else {
-        return <span style={{color: `#E74C3C`}}>Username already exists.</span>
+        return <span style={{color: `#E74C3C`}}>
+          Username already exists.
+        </span>
       }
     }
   }
@@ -50,7 +64,8 @@ class Signup extends Component {
             <input
               type="text"
               id="firstName"
-              name="user_firstName"
+              name="firstName"
+              onChange={this.updateInfo("firstName")}
             />
           </div>
 
@@ -59,16 +74,18 @@ class Signup extends Component {
             <input
               type="text"
               id="lastName"
-              name="user_lastName"
+              name="lastName"
+              onChange={this.updateInfo("lastName")}
             />
           </div>
 
           <div>
-            <label>Username:</label>
+            <label>Email:</label>
             <input
               type="text"
               id="signup_username"
-              name="signu_user_username"
+              name="email"
+              onChange={this.updateInfo("email")}
             />
           </div>
 
@@ -77,7 +94,8 @@ class Signup extends Component {
             <input 
               type="password" 
               id="signup_password" 
-              name="signup_user_password" 
+              name="password"
+              onChange={this.updateInfo("password")} 
             />
           </div>
          
@@ -96,4 +114,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default withRouter(Signup);
