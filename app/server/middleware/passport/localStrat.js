@@ -6,17 +6,22 @@ import User from '../../../database/models/user';
 
 const local = new LocalStrategy(
 	function(email, password, done) {
-		User.findOne({ 'local.email': email }, (err, userMatch) => {
+		console.log(email);
+		console.log(password);
+		User.findOne({ email: email }, (err, user) => {
 			if (err) {
+				console.log(`\n${err}\n`);
 				return done(err);
 			}
-			if (!userMatch) {
+			if (!user) {
+				console.log('\nBAD USERNAME!!!\n');
 				return done(null, false, { message: 'Incorrect email' });
 			}
-			if (!userMatch.checkPassword(password)) {
+			if (!user.checkPassword(password)) {
+				console.log('\nBAD PASSWORD!!!\n');
 				return done(null, false, { message: 'Incorrect password' });
 			}
-			return done(null, userMatch);
+			return done(null, user);
 		});
 	}
 );

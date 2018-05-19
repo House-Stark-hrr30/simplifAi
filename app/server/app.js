@@ -47,7 +47,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, '../../client/build')));
 
 // === direct app to use routes set in routes folder
-app.use('/user', user);
+app.use('/user', (req, res, next) => {console.log("Entering user route..."); next()}, user);
 app.use('/data', data);
 
 

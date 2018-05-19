@@ -15,7 +15,7 @@ class Modal extends React.Component {
 
           <button
             className="close-btn"
-            onClick={this.props.onClose}
+            onClick={() => this.props.closeModal(null)}
           >
             X
           </button>

@@ -9,17 +9,24 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: '',
-      // failedLogin: '',
+      credentials: {
+        email: '',
+        password: ''
+      },
+      failedLogin: '',
       signupClick: false
     };
     this.signupToggle = this.signupToggle.bind(this);
   }
 
-  updateInfo(e) {
-    this.setState({
-      [e.target.name]: e.target.value});
+  updateUserInfo(key) {
+    return (e) => {
+      const creds = Object.assign({}, this.state.credentials);
+      creds[key] = e.target.value;
+      this.setState({
+        credentials: creds
+      });
+    }
   }
 
   signupToggle() {
@@ -29,28 +36,39 @@ class Login extends Component {
   }
 
   sendLogin(e) {
-    axios.post('/user/login', this.state)
+    axios.post('/user/login', this.state.credentials)
       .then(user => {
-        this.props.history.push('/'); //! uncomment this when request is verified
         console.log(user);
+        this.props.toggleModal(null, () => this.props.history.push('/about'));
       })
       .catch((err) => {
         this.setState({
           failedLogin: 'Incorrect username or password.'
         })
-        console.log(err); 
+        console.log(err);
       });
+  }
+
+  renderFailedAttempt() {
+    return this.state.failedLogin === ''
+      ? null
+      : (
+        <div>
+          <p>{this.state.failedLogin}</p>
+        </div>
+      );
   }
 
   render() {
     if (this.state.signupClick) {
       return (
-        <Signup />
+        <Signup toggleModal={this.props.toggleModal} />
       );
     }
 
     return (
       <div className="Login">
+        {this.renderFailedAttempt()}
         <form>
           <div>
             <label>Email:</label>
@@ -58,7 +76,7 @@ class Login extends Component {
               type="text"
               id="login_username"
               name="email"
-              onChange={this.updateInfo.bind(this)}
+              onChange={this.updateUserInfo("email")}
             />
           </div>
 
@@ -68,10 +86,10 @@ class Login extends Component {
               type="password" 
               id="login_password" 
               name="password"
-              onChange={this.updateInfo.bind(this)}
+              onChange={this.updateUserInfo("password")}
             />
           </div>
-         
+         <br />
           <button
             type="button"
             className="login-btn"

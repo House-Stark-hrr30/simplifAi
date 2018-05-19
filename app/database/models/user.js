@@ -46,6 +46,7 @@ export default function (sequelize, DataTypes) {
       },
       instanceMethods: {
         checkPassword(password) {
+          console.log('Checking passwords...');
           return bcrypt.compare(password, this.password);
         }
       }

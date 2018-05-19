@@ -10,13 +10,14 @@ import passport from '../middleware/passport/passport';
 const data = Router();
 
 //use passport authentication for this route
-data.use(passport.authenticate("local"));
+// data.use(passport.authenticate("local"));
 
 // Gets data from Google spreadsheets
 // Note the response is passed in as an argument in googleHelpers.getSpreadsheetData
 data.get('/getGSheet', (req, res) => {
   console.log('Entered getSpreadsheetData get req ....');
   console.log(req.query.googleSheetID);
+  console.log(`U S E R === ${req.user}`);
   googleHelpers.getSpreadsheetData(res, req.query.googleSheetID);
 });
 

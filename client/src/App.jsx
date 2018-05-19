@@ -11,30 +11,40 @@ class App extends Component {
     super(props);
     this.state = {
       currentModal: 'login',
-      isOpen: false
+      isOpen: false,
+      user: {}
     }
-
-    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal (view) {
-    if(view != null) {
-      const views = {
-        'login': <Login />
-      };
-
-      this.setState({
-        isOpen: !this.state.isOpen,
-        currentModal: views[view]
-      });
+  toggleModal () {
+    const ctx = this;
+    return (view, callback) => {
+      callback = callback ? callback() : () => {};
+      if(view != null) {
+        const views = {
+          'login': <Login toggleModal={ctx.toggleModal()} />
+        };
+        
+        ctx.setState({
+          isOpen: !ctx.state.isOpen,
+          currentModal: views[view]
+        });
+      } else if (view === null) {
+        ctx.setState({isOpen: false}, callback());
+      }
     }
+  }
+
+  setUser(userObj){
+    if (userObj.password) delete userObj.password;
+    this.setState({userObj});
   }
 
   render() {
     return (
       <div className="App">
         <Header
-          toggleModal={this.toggleModal}
+          toggleModal={this.toggleModal()}
         />
 
         <Body />
@@ -43,8 +53,9 @@ class App extends Component {
 
         <Modal
           show={this.state.isOpen}
-          onClose={this.toggleModal}
+          closeModal={this.toggleModal()}
           component={this.state.currentModal}
+          updateUser={this.setUser.bind(this)}
         />
       </div>
     );
