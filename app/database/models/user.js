@@ -1,6 +1,6 @@
 'use strict';
 
-import bcrypt from 'bcrypt-nodejs';
+import bcrypt from 'bcryptjs';
 
 export default function (sequelize, DataTypes) {
   const User = sequelize.define('User', {
