@@ -19,10 +19,13 @@ class App extends Component {
   toggleModal () {
     const ctx = this;
     return (view, callback) => {
-      callback = callback ? callback() : () => {};
+      callback = callback ? callback : () => {};
       if(view != null) {
         const views = {
-          'login': <Login toggleModal={ctx.toggleModal()} />
+          'login': <Login
+            toggleModal={ctx.toggleModal()}
+            setUser={ctx.setUser.bind(this)}
+          />
         };
         
         ctx.setState({
@@ -35,7 +38,7 @@ class App extends Component {
     }
   }
 
-  setUser(userObj){
+  setUser(userObj, callback){
     if (userObj.password) delete userObj.password;
     this.setState({userObj});
   }

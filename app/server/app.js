@@ -38,13 +38,13 @@ app.use(function(req, res, next) {
 });
 app.disable('x-powered-by');
 
+// === serve up static files
+app.use(express.static(path.join(__dirname, '../../client/build')));
+
 // === initialize sessions and authentication
 app.use(session(sessionConfig));
 app.use(passport.initialize());
 app.use(passport.session());
-
-// === serve up static files
-app.use(express.static(path.join(__dirname, '../../client/build')));
 
 // === direct app to use routes set in routes folder
 app.use('/user', (req, res, next) => {console.log("Entering user route..."); next()}, user);
