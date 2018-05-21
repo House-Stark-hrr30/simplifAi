@@ -22,14 +22,34 @@ const Header = (props) => {
           SimplifAi
         </div>
 
-        <div className="logo">
+        <Link to="#" className="header-menu-login" onClick={() => props.toggleModal('login')}> 
+          <p> Login </p> 
+        </Link>
+
+        {/* <div className="menu icon" onClick={() => props.toggleModal('login')}></div> */}
+
+        {/* <nav className="menu">
+          <input type="checkbox" href="#" className="menu-open" name="menu-open" id="menu-open"/>
+          <label class="menu-open-button" htmlFor="menu-open">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+          </label>
+          
+          <a href="#" className="menu-item"> <i className="fa fa-bar-chart"></i> </a>
+          <a href="#" className="menu-item"> <i className="fa fa-plus"></i> </a>
+          <a href="#" className="menu-item"> <i className="fa fa-heart"></i> </a>
+          <a href="#" className="menu-item"> <i className="fa fa-envelope"></i> </a>
+        </nav> */}
+
+        {/* <div className="logo">
           <img
             src={wolf}
             alt="logo"
             className="logo-pic"
             onClick={() => props.toggleModal('login')}
           />
-        </div>
+        </div> */}
 
       </div>
     </header>

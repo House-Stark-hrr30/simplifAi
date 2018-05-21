@@ -1,4 +1,4 @@
-.section-features__bg {
+.features__bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,25 +9,7 @@
   overflow: hidden;
 }
 
-.section-features__bg__pic {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.section-stories__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: .15;
-  overflow: hidden;
-}
-
-.section-stories__bg__pic {
+.features__bg__pic {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -68,13 +50,13 @@
   transform: translateY(-1.5rem) scale(1.03);
 }
 
-.section-features {
+.features {
   padding: 5rem 10rem 15rem 10rem;
   position: relative;
 }
 
 @media only screen and (max-width: 56.25em) {
-  .section-features {
+  .features {
     padding: 8rem 0;
   }
 }
