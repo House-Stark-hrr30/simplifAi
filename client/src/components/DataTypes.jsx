@@ -88,7 +88,7 @@ class DataTypes extends Component {
     };
     return (
       <div className="carousel">
-        <h2 className="carousel-heading">Auto Play</h2>
+        <h2 className="carousel-heading">Data Types</h2>
         <Slider {...settings}>
           <div>
             <h3><img className="card-1" alt="1" src="img/wolf.png"></img></h3>
