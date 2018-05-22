@@ -26,7 +26,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # config files
-client_secret.json
-credentials.json
-googleKeys.js
-config.json
+config.js

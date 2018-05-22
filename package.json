@@ -43,6 +43,7 @@
     "opn": "^5.3.0",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -70,16 +71,11 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
     "babel-node": "babel-node --presets=env",
-    "start-dev": "nodemon --exec npm run babel-node -- ./app/server/index.js",
-    "start-prod": "node --exec npm run babel-node -- ./app/server/index.js",
-    "trial-test": "jest",
-    "trial-start": "node ./app/server/index.js",
-    "trial-server-dev": "nodemon ./app/server/index.js",
-    "trial-react-dev": "webpack -d --watch"
+    "test": "jest",
+    "start": "node --exec npm run babel-node -- ./app/server/index.js",
+    "server-dev": "nodemon --exec npm run babel-node -- ./app/server/index.js",
+    "react-dev": "webpack -d --watch"
   },
   "proxy": "http://localhost:3000",
   "jest": {

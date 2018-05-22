@@ -8,7 +8,6 @@
 // === import node modules
 import express from 'express';
 import bodyParser from 'body-parser';
-import expressValidator from 'express-validator';
 import session from 'express-session';
 import morgan from 'morgan';
 import path from 'path';
