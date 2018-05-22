@@ -201,18 +201,12 @@ class Upload extends Component {
         <div className="grid__item table-section">
           <div className="content">
             <div className="content-inside">
-            <div>
-              <div className="spreadsheet-input-div">
-                <input className="spreadsheet-input" type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
-              </div>
-              <button type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
-              </div>
               <div>
-                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()}/>
+                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()} handleGoogleSheetIDChange={this.handleGoogleSheetIDChange.bind(this)} handleImportClick={this.handleImportClick.bind(this)} />
               </div>
-              <div style={{ 'margin': '2% 72% 0 0', 'display': 'inline-block'}}>
+              <div style={{ 'margin': '2% 520px 0 0', 'display': 'inline-block'}}>
                 <label style={{'font-size': '12px', 'margin-right': '5px'}}>Chart Type:</label>
-                <select style={{'font-size': '12px'}} id="charts" onChange={this.changeChart.bind(this)} charttype={this.state.chartType}>
+                <select style={{'font-size': '12px', 'background-color': 'white'}} id="charts" onChange={this.changeChart.bind(this)} charttype={this.state.chartType}>
                   <option value="line">Line</option>
                   <option value="bar">Bar</option>
                   <option value="pie">Pie</option>

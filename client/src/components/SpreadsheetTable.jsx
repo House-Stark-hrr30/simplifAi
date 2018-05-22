@@ -73,9 +73,20 @@ class SpreadsheetTable extends Component {
     this.props.toggleModal('addRow');
   }
 
+  handleGoogleSheetIDChange(e) {
+    this.props.handleGoogleSheetIDChange(e);
+  }
+
+  handleImportClick() {
+    this.props.handleImportClick();
+  }
+
   render() {
     return (
       <div className="table-area">
+      <div style={{
+
+}}>
         <input style={{
   'width': '200px',
   'height': '18px',
@@ -84,10 +95,12 @@ class SpreadsheetTable extends Component {
   'font-family': 'Raleway',
   'border-radius': '5px'
 }}
-        className="" type="text" placeholder="Enter your google sheet key" />
-        <button type="button" className="">Import</button>
-        <button style={{'margin-left': '290px'}} className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
+        className="spreadsheet-input" type="text" placeholder="Enter your google sheet key" onChange={this.handleGoogleSheetIDChange.bind(this)} />
+        <button style={{'margin-right': '290px'}} type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
+
+        <button style={{'margin-left': '0px'}} className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
         <button className="add-row-btn" onClick={this.addRow.bind(this)}>Add Row</button>
+        </div>
         <Table
           rowKey={(() => {
             let x = 0;
