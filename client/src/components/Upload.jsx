@@ -33,11 +33,11 @@ class Upload extends Component {
         const views = {
           'login': <Login />,
           'addColumn': <AddColumn
-            handleAddHeaderClick={ctx.handleAddHeaderClick}
-            handleAddColumnDataClick={ctx.handleAddColumnDataClick}
+            handleAddHeaderClick={this.handleAddHeaderClick.bind(this)}
+            handleAddColumnDataClick={this.handleAddColumnDataClick.bind(this)}
             />,
           'addRow': <AddRow
-            handleAddRowClick={ctx.handleAddRowClick} />
+            handleAddRowClick={this.handleAddRowClick.bind(this)} />
         };
 
         ctx.setState({
