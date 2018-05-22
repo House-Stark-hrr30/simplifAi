@@ -1,9 +1,9 @@
 // === run dotenv to configure environment variables for this project
-import dotenv from 'dotenv';
-if (process.env.NODE_ENV !== 'production') {
-  console.log('loading dev environments');
-	dotenv.config({path: '../.env'});
-}
+// import dotenv from 'dotenv';
+// if (process.env.NODE_ENV !== 'production') {
+//   console.log('loading dev environments');
+// 	dotenv.config({path: '../.env'});
+// }
 
 // === import node modules
 import express from 'express';

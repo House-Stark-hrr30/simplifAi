@@ -75,7 +75,11 @@
     "test": "node scripts/test.js --env=jsdom",
     "babel-node": "babel-node --presets=env",
     "start-dev": "nodemon --exec npm run babel-node -- ./app/server/index.js",
-    "start-prod": "node --exec npm run babel-node -- ./app/server/index.js"
+    "start-prod": "node --exec npm run babel-node -- ./app/server/index.js",
+    "trial-test": "jest",
+    "trial-start": "node ./app/server/index.js",
+    "trial-server-dev": "nodemon ./app/server/index.js",
+    "trial-react-dev": "webpack -d --watch"
   },
   "proxy": "http://localhost:3000",
   "jest": {
@@ -114,6 +118,7 @@
   },
   "babel": {
     "presets": [
+      "env",
       "react-app"
     ]
   },

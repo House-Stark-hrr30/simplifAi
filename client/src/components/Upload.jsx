@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import './Upload.css';
-import axios from 'axios';
-import SpreadsheetTable from './SpreadsheetTable';
-import Modal from './Modal';
-import Login from './Login';
-import AddColumn from './AddColumn';
-import AddRow from './AddRow';
 import {withRouter} from 'react-router-dom';
+import axios from 'axios';
+
+import './Upload.css';
+
+import SpreadsheetTable from './SpreadsheetTable.jsx';
+import Modal from './Modal.jsx';
+import Login from './Login.jsx';
+import AddColumn from './AddColumn.jsx';
+import AddRow from './AddRow.jsx';
 
 class Upload extends Component {
   constructor(props) {
@@ -22,7 +24,7 @@ class Upload extends Component {
   }
 
   //Toggles what component to show in the modal
-  toggleModal = () => {
+  toggleModal() {
     let ctx = this;
     return view => {
       if (view === null) {
