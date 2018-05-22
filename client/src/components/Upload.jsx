@@ -195,7 +195,7 @@ class Upload extends Component {
           <div className="content">
             <div className="content-inside">
               <h2 className="heading-main">Machine Learning</h2>
-              <p className="heading-sub">Submit data to get started!</p>
+              <p className="heading-sub">Submit beta to get started!</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 
 const SRC_DIR = path.join(__dirname, 'client/src');
 const DIST_DIR = path.join(__dirname, 'client/build');
@@ -18,9 +18,20 @@ module.exports = {
         loader : 'babel-loader',      
         query: {
           presets: ['react', 'env']
-       }
+        }
       },
-      { test: /\.css$/, loader: 'style-loader!css-loader' }
+      {
+        test: /\.css$/,
+        loader: 'style-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        }
+      }
       // {
         
       //   test: /\.css$/,
