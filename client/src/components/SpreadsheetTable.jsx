@@ -76,7 +76,17 @@ class SpreadsheetTable extends Component {
   render() {
     return (
       <div className="table-area">
-        <button className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
+        <input style={{
+  'width': '200px',
+  'height': '18px',
+  'margin-right': '10px',
+  'font-size': '12px',
+  'font-family': 'Raleway',
+  'border-radius': '5px'
+}}
+        className="" type="text" placeholder="Enter your google sheet key" />
+        <button type="button" className="">Import</button>
+        <button style={{'margin-left': '290px'}} className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
         <button className="add-row-btn" onClick={this.addRow.bind(this)}>Add Row</button>
         <Table
           rowKey={(() => {
