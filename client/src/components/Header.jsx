@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Header.css';
-import wolf from '../wolf.png';
 
 const Header = (props) => {
   return (

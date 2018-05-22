@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 // import './DataTypes.css';
 // import $ from 'jquery';
 import Slider from "react-slick";
-import "./slick/slick.css";
-import "./slick/slick-theme.css";
+// import "./slick/slick.css";
+// import "./slick/slick-theme.css";
 import "./DataTypes.css";
 
 

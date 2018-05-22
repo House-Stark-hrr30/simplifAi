@@ -3,13 +3,13 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
 // import local files
 import User from '../../../database/models/user'; //todo: verify db route
-import { googleClientSecret, googleClientID } from './googleKeys';
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '../../../config';
 
 
 const strategy = new GoogleStrategy(
 	{
-		clientID: googleClientID,
-		clientSecret: googleClientSecret,
+		clientID: GOOGLE_CLIENT_ID,
+		clientSecret: GOOGLE_CLIENT_SECRET,
 		callbackURL: '/auth/google/callback'
 	},
 	function(token, tokenSecret, profile, done) {
