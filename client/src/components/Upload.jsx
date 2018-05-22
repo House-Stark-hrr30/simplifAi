@@ -16,7 +16,8 @@ class Upload extends Component {
       optimizedSpreadSheetData: [],
       googleSheetID: '',
       modalOpen: false,
-      currentModal: 'login'
+      currentModal: 'login',
+      chartType: 'line'
     }
   }
 
@@ -179,6 +180,11 @@ class Upload extends Component {
     });
   }
 
+  changeChart(e) {
+    console.log('Entered changeChart...');
+    console.log(e.target.value);
+  }
+
   render() {
     return (
       <div className="Upload">
@@ -195,16 +201,21 @@ class Upload extends Component {
         <div className="grid__item table-section">
           <div className="content">
             <div className="content-inside">
-            <div>
-              <div className="spreadsheet-input-div">
-                <input className="spreadsheet-input" type="text" onChange={this.handleGoogleSheetIDChange.bind(this)} placeholder="Enter your google sheet key" />
-              </div>
-              <button type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
-              <button type="button" className="submit" disabled={this.state.spreadSheetData.length === 0} onClick={this.sendDataToChart.bind(this)}>Submit</button>
-              </div>
               <div>
-                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()}/>
+                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()} handleGoogleSheetIDChange={this.handleGoogleSheetIDChange.bind(this)} handleImportClick={this.handleImportClick.bind(this)} />
               </div>
+              <div style={{ 'margin': '2% 520px 0 0', 'display': 'inline-block'}}>
+                <label style={{'font-size': '12px', 'margin-right': '5px'}}>Chart Type:</label>
+                <select style={{'font-size': '12px', 'background-color': 'white'}} id="charts" onChange={this.changeChart.bind(this)} charttype={this.state.chartType}>
+                  <option value="line">Line</option>
+                  <option value="bar">Bar</option>
+                  <option value="pie">Pie</option>
+                  <option value="radar">Radar</option>
+                  <option value="doughnut">Doughnut</option>
+                  <option value="polar">Polar</option>
+                </select>
+              </div>
+              <button type="button" className="submit" disabled={this.state.spreadSheetData.length === 0} onClick={this.sendDataToChart.bind(this)}>Submit</button>
               <form>
               </form>
             </div>
