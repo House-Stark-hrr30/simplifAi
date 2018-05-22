@@ -5,6 +5,8 @@ import Upload from './Upload.jsx';
 import About from './About.jsx';
 import Chart from './Chart.jsx';
 import Dashboard from './Dashboard.jsx';
+import MachineLearning from './MachineLearning.jsx';
+import DataTypes from './DataTypes.jsx';
 
 class Body extends React.Component {
   constructor(props) {
@@ -44,6 +46,10 @@ class Body extends React.Component {
             return (<Upload updateData={this.updateState('data')} data={this.state.data} />)
           } }
         />
+        
+        <Route path='/machinelearning'
+          component={ MachineLearning }
+        />
 
         <Route path='/about'
           component={ About }
@@ -57,6 +63,10 @@ class Body extends React.Component {
 
         <Route path='/dashboard'
           component={ Dashboard }
+        />
+
+        <Route path='/datatypes'
+          component={ DataTypes }
         />
 
       </Switch>

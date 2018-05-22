@@ -24,11 +24,11 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <div className="section-features">
+        <div className="features">
 
-            <div className="section-features__bg">
+            <div className="features__bg">
 
-                <img className="section-features__bg__pic" src="img/abstract.jpg" alt="abstract">
+                <img className="features__bg__pic" src="img/abstract.jpg" alt="abstract">
                 </img>
             </div>
 

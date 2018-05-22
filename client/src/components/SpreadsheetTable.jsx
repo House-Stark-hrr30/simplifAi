@@ -23,7 +23,7 @@ class SpreadsheetTable extends Component {
         headerArrayTable.push({
           title: headerArray[i],
           dataIndex:headerArray[i],
-          key: headerArray[i],
+          key: i,
           width: 100,
           onCell: record => ({
             onClick(e) {
@@ -46,6 +46,7 @@ class SpreadsheetTable extends Component {
       for(var i = 0; i < bodyArray.length; i++) {
         var obj = {};
         for(var j = 0; j < headerArray.length; j++) {
+          // obj.key = `${i}${j} Brandon smells`;
           obj[headerArray[j]] = bodyArray[i][j];
         }
         bodyArrayTable.push(obj);
@@ -78,6 +79,13 @@ class SpreadsheetTable extends Component {
         <button className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
         <button className="add-row-btn" onClick={this.addRow.bind(this)}>Add Row</button>
         <Table
+          rowKey={(() => {
+            let x = 0;
+            return () => {
+              x++;
+              return x - 1;
+            }
+          })()}
           columns={this.getSpreadsheetHeaderData()}
           scroll={{ x: 650, y: 200 }}
           data={this.getSpreadsheetBodyData()}

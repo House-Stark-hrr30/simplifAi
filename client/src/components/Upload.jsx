@@ -21,23 +21,31 @@ class Upload extends Component {
   }
 
   //Toggles what component to show in the modal
-  toggleModal = (view) => {
-    if(view != null) {
-      const views = {
-        'login': <Login />,
-        'addColumn': <AddColumn
-          handleAddHeaderClick={this.handleAddHeaderClick.bind(this)}
-          handleAddColumnDataClick={this.handleAddColumnDataClick.bind(this)}
-          />,
-        'addRow': <AddRow
-          handleAddRowClick={this.handleAddRowClick.bind(this)} />
-      };
+  toggleModal = () => {
+    let ctx = this;
+    return view => {
+      if (view === null) {
+        ctx.setState({
+          modalOpen: false
+        });
+      }
+      if(view != null) {
+        const views = {
+          'login': <Login />,
+          'addColumn': <AddColumn
+            handleAddHeaderClick={this.handleAddHeaderClick.bind(this)}
+            handleAddColumnDataClick={this.handleAddColumnDataClick.bind(this)}
+            />,
+          'addRow': <AddRow
+            handleAddRowClick={this.handleAddRowClick.bind(this)} />
+        };
 
-      this.setState({
-        modalOpen: !this.state.modalOpen,
-        currentModal: views[view]
-      });
-    }
+        ctx.setState({
+          modalOpen: !ctx.state.modalOpen,
+          currentModal: views[view]
+        });
+      }
+    };
   }
 
   //Google Sheets API returns an Array of Arrays
@@ -195,7 +203,7 @@ class Upload extends Component {
               <button type="button" className="submit" disabled={this.state.spreadSheetData.length === 0} onClick={this.sendDataToChart.bind(this)}>Submit</button>
               </div>
               <div>
-                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal.bind(this)}/>
+                <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()}/>
               </div>
               <form>
               </form>
@@ -205,7 +213,7 @@ class Upload extends Component {
 
         <Modal
           show={this.state.modalOpen}
-          onClose={this.toggleModal.bind(this)}
+          onClose={this.toggleModal()}
           component={this.state.currentModal}
         >
         </Modal>
