@@ -1,0 +1,159 @@
+.paragraph {
+  /* padding-bottom: 25rem; */
+}
+
+.section-about-ml {
+  background-color: #f7f7f7;
+  padding: 3rem 3rem 50rem 3rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .section-about-ml {
+    padding: 3rem 3rem 12rem 3rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.center-text {
+  text-align: center !important;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.margin-bottom-big-ml {
+  margin-bottom: 5rem !important;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .margin-bottom-big {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.home-composition {
+  position: relative;
+}
+
+.home-composition__photo-ml {
+  width: 90%;
+  /* -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); */
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  /* outline-offset: 2rem; */
+  margin-left: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .home-composition__photo-ml {
+    float: center;
+    position: relative;
+    width: 50%;
+    /* -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); */
+  }
+}
+
+.home-composition__photo--p1-ml {
+  /* margin-top: -2.8%; */
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .home-composition__photo--p1-ml {
+    /* top: 0; */
+    float: center;
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    margin: 11rem 0 0 11rem;
+    /* padding: 8rem 0; */
+  }
+}
+
+/* from CSS course by Jonas Schmedtmann */
+.row-ml {
+  /* max-width: 114rem; */
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.row-ml:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .row-ml:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .row-ml {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+}
+
+/* to keep correct spacing */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}

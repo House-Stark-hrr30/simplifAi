@@ -10,6 +10,10 @@ h3 {
 .carousel-heading {
   /* text-align: center; */
   padding-bottom: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: .2rem;
 }
 
 /* body, html {
@@ -20,13 +24,50 @@ h3 {
 } */
 
 .card-1 {
-  height: 50px;
+
+}
+
+.img-1 {
+  /* height: 50px; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   /* float: center; */
 }
 
+/* ended up switching in slick-theme.css instead */
+/* button .slick-prev::before .slick-next::before {
+  color: black !important; */
+  /* font-size: 40px; */
+/* } */
+
+
+.slick-prev .slick-next {
+  /* display: inline-block; */
+  /* color: black !important; */
+  /* z-index: 10; */
+  /* margin: auto; */
+  /* padding: 20px; */
+  /* width: 80%; */
+}
+
+.slick-prev {
+  margin-left: 40px;
+  /* margin: auto; */
+}
+
+.slick-next {
+  margin-right: 40px;
+}
+
+/* .slick-next {
+
+} */
+
 .slick-list {
   /* margin: 0 -10px; */
-  width: 100%;
+  margin: auto;
+  width: 80%;
   height: 300px;
 }
 

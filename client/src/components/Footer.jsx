@@ -20,7 +20,7 @@ const Footer = (props) => {
             </div>
             <div className="col-1-of-2">
                 <p className="footer__copyright">
-                    Copyright &copy; 2018 House Stark
+                    Copyright &copy; 2018 SimplifAi
                 </p>
             </div>
         </div>

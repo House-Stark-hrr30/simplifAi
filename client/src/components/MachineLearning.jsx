@@ -5,30 +5,29 @@ import './MachineLearning.css';
 const MachineLearning = (props) => {
   return (
     <div>
-      <div className="section-about">
-          <div className="center-text margin-bottom-big">
+      <div className="section-about-ml">
+          <div className="center-text margin-bottom-big-ml">
               <h2 className="heading-main">
-                  Welcome to SimplifAi
-                  <p> Your data's important -- find out what it has to say </p>
+                  What is Machine Learning?
+                  <p> How it works, and why it matters </p>
               </h2>
           </div>
-          <div className="row">
+          <div className="row-ml">
               <div className="col-1-of-2">
-                  <h3 className="heading-tertiary margin-bottom-small">Use SimplifAi to simplify your life</h3>
+                  {/* <h3 className="heading-tertiary margin-bottom-small">Use SimplifAi to simplify your life</h3> */}
                   <p className="paragraph">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                      ducimus quam nisi exercitationem omnis earum qui.
+                    Machine learning is a subset of artificial intelligence that uses various algorithms to learn trends within data and enables the user to request predictions about how a new piece of data might fit within that trend.
                   </p>
-                  <h3 className="heading-tertiary margin-bottom-small">Discover new things about your data</h3>
+                  {/* <h3 className="heading-tertiary margin-bottom-small">Discover new things about your data</h3>
                   <p className="paragraph">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
-                  </p>
+                  </p> */}
               </div>
               <div>
                   <div className="home-composition">
-                      <img alt="Photo 1"
-                          className="home-composition__photo home-composition__photo--p1"
-                          src="img/office_2.jpeg"/>
+                      <img alt="Machine Learning"
+                          className="home-composition__photo-ml home-composition__photo--p1-ml"
+                          src="img/machine-learning-process.png"/>
                   </div>
               </div>
           </div>
