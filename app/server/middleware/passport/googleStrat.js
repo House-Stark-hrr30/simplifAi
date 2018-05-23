@@ -3,7 +3,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 
 // import local files
 import User from '../../../database/models/user'; //todo: verify db route
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '../../../config';
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '../../../../config';
 
 
 const strategy = new GoogleStrategy(
