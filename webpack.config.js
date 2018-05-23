@@ -6,7 +6,7 @@ const DIST_DIR = path.join(__dirname, 'client','build');
 module.exports = {
   entry: `${SRC_DIR}/index.js`,
   output: {
-    filename: 'bundles.js',
+    filename: 'bundle.js',
     path: DIST_DIR
   },
   module : {
