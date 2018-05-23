@@ -55,6 +55,17 @@
   padding-right: 3rem;
 }
 
+.circle-img {
+  width: 80px;
+  padding: 40px 0;
+  transition: all .15s ease-in;
+}
+
+.ml-text {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 .home-composition {
   position: relative;
 }

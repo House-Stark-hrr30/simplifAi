@@ -45,36 +45,39 @@ const MachineLearning = (props) => {
           <div className="grid-ml">
               <div className="col-1-of-4">
                   <div className="feature-box-ml">
-                    {/* <img ></img> */}
+                    <img src="img/Siri.png" alt="Siri" className="circle-img"></img>
                   </div>
-                  <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Explore your data</h3>
-                      <p className="feature-box__text">
+                  <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Siri</h3>
+                    <p className="feature-box__text ml-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                    </p>
+              </div>
+              <div className="col-1-of-4">
+                  <div className="feature-box-ml">
+                    
+                  </div>
+                  <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Netflix</h3>
+                    <p className="feature-box__text ml-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                    </p>
+              </div>
+              <div className="col-1-of-4">
+                  <div className="feature-box-ml">
+                    
+                  </div>
+                  <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Youtube</h3>
+                    <p className="feature-box__text ml-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                    </p>
+              </div>
+              <div className="col-1-of-4">
+                  <div className="feature-box-ml">
+
+                  </div>
+                      <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Amazon</h3>
+                      <p className="feature-box__text ml-text">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                       </p>
-              </div>
-              <div className="col-1-of-4">
-                  <div className="feature-box-ml">
-                      {/* <h3 className="heading-tertiary margin-bottom-small">Save time</h3>
-                      <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                      </p> */}
-                  </div>
-              </div>
-              <div className="col-1-of-4">
-                  <div className="feature-box-ml">
-                      {/* <h3 className="heading-tertiary margin-bottom-small">Combine your data</h3>
-                          <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                      </p> */}
-                  </div>
-              </div>
-              <div className="col-1-of-4">
-                  <div className="feature-box-ml">
-                      {/* <h3 className="heading-tertiary margin-bottom-small">Versatile support</h3>
-                      <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                      </p> */}
-                  </div>
               </div>
           </div>
       </div>
