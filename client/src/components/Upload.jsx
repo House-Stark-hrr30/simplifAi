@@ -177,7 +177,8 @@ class Upload extends Component {
 
   sendDataToChart() {
     let data = this.state.spreadSheetData;
-    this.props.updateData(data, () => {
+    let charttype = this.state.chartType;
+    this.props.updateData(data, charttype, () => {
       this.props.history.push('/chart');
     });
   }
@@ -185,6 +186,9 @@ class Upload extends Component {
   changeChart(e) {
     console.log('Entered changeChart...');
     console.log(e.target.value);
+    this.setState({
+      chartType: e.target.value
+    });
   }
 
   render() {
@@ -208,7 +212,7 @@ class Upload extends Component {
               </div>
               <div style={{ 'margin': '2% 520px 0 0', 'display': 'inline-block'}}>
                 <label style={{'font-size': '12px', 'margin-right': '5px'}}>Chart Type:</label>
-                <select style={{'font-size': '12px', 'background-color': 'white'}} id="charts" onChange={this.changeChart.bind(this)} charttype={this.state.chartType}>
+                <select style={{'font-size': '12px', 'background-color': 'white'}} id="charts" onChange={this.changeChart.bind(this)}>
                   <option value="line">Line</option>
                   <option value="bar">Bar</option>
                   <option value="pie">Pie</option>
