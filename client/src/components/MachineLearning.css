@@ -29,6 +29,10 @@
   margin-bottom: 1.5rem !important;
 }
 
+.margin-top-small {
+  margin-top: 1.5rem !important;
+}
+
 .margin-bottom-big-ml {
   margin-bottom: 5rem !important;
 }
@@ -37,6 +41,18 @@
   .margin-bottom-big {
     margin-bottom: 5rem !important;
   }
+}
+
+.heading-tertiary-ml {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.feature-box__text {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .home-composition {
@@ -82,6 +98,39 @@
     /* padding: 8rem 0; */
   }
 }
+
+.section-features-ml {
+  padding: 10rem 0 15rem 0;
+  position: relative;
+}
+
+.feature-box-ml {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* font-size: 1.5rem;
+  padding: 2.5rem; */
+  text-align: center;
+  border-radius: 80px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  width: 160px;
+  height: 160px;
+  margin: auto;
+}
+
+.feature-box-ml:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.03);
+  transform: translateY(-1.5rem) scale(1.03);
+}
+
+.grid-ml {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-gap: 4em; */
+}
+
 
 /* from CSS course by Jonas Schmedtmann */
 .row-ml {
