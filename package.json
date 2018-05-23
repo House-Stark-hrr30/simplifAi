@@ -73,7 +73,7 @@
   "scripts": {
     "babel-node": "babel-node --presets=env",
     "test": "jest",
-    "start": "node --exec npm run babel-node -- ./app/server/index.js",
+    "start": "babel-node ./app/server/index.js",
     "server-dev": "nodemon --exec npm run babel-node -- ./app/server/index.js",
     "react-dev": "webpack -d --watch"
   },
