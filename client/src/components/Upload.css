@@ -15,9 +15,10 @@
   /* grid-template-rows: repeat( auto-fill, minmax(30px, 1fr) ); */
   /* grid-template-rows: 1fr min-content; */
   height: 78vh;
-  margin: 1.5% 1.5%;
+  /* margin: 1.5% 1.5%; */
   /* padding-top: 1%; */
   /* width: 100vw; */
+  background-color: #f7f7f7;
 }
 
 .grid__item {
@@ -179,7 +180,7 @@ grid_item .content-inside {
 }
 
 .heading-main {
-  font-size: 3.5rem;
+  font-size: 3rem !important;
   font-weight: 700;
   display: inline-block;
   letter-spacing: .2rem;

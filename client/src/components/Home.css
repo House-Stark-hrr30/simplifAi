@@ -7,7 +7,7 @@
 }
 
 .heading-main {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   display: inline-block;
   letter-spacing: .2rem;
@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: 56.25em) {
   .heading-main {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .heading-main p {
@@ -32,12 +32,12 @@
   }
 
   .heading-main p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   display: inline-block;
   letter-spacing: .2rem;
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 56.25em) {
   .heading-secondary {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -293,8 +293,9 @@
     padding: 20rem 0;
   }
 }
+
 .section-features {
-  padding: 20rem 0 20rem 0;
+  padding: 15rem 0 15rem 0;
   position: relative;
 }
 
@@ -306,7 +307,7 @@
 
 .section-stories {
   position: relative;
-  padding: 15rem 0;
+  padding: 10rem 0;
 }
 
 @media only screen and (max-width: 56.25em) {
