@@ -82,16 +82,22 @@ class DataTypes extends Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear"
+      speed: 3000,
+      autoplaySpeed: 3000,
+      cssEase: "linear",
+      // arrows: true
+      arrows: true,
+      prevArrow: < CustomPrevArrow />,
+      nextArrow: < CustomNextArrow />,
+      // centerMode: true
     };
     return (
       <div className="carousel">
         <h2 className="carousel-heading">Data Types</h2>
         <Slider {...settings}>
-          <div>
-            <h3><img className="card-1" alt="1" src="img/wolf.png"></img></h3>
+          {/* <button type="button" className="slick-prev">Previous</button> */}
+          <div className="card-1 Slider">
+            <img className="img-1" alt="1" src="img/wolf.png"></img>
           </div>
           <div>
             <h3>2</h3>
@@ -108,10 +114,27 @@ class DataTypes extends Component {
           <div>
             <h3>6</h3>
           </div>
+
+          {/* <button type="button" className="slick-next">Next</button> */}
         </Slider>
       </div>
     );
   }
 }
+
+const CustomPrevArrow = props => { 
+  return (
+    <button type="button" className="slick-prev">Previous</button>
+  );
+};
+
+const CustomNextArrow = props => {
+  return (
+    // <div {...this.props}>
+    //   <img src="/images/arrow_prev.png" />
+    // </div>
+    <button type="button" className="slick-next">Next</button>
+  );
+};
 
 export default DataTypes;
