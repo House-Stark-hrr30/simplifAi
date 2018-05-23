@@ -54,16 +54,16 @@ const MachineLearning = (props) => {
               </div>
               <div className="col-1-of-4">
                   <div className="feature-box-ml">
-                    
+                    <img src="img/iMessage.png" alt="iMessage" className="circle-img-2"></img>
                   </div>
-                  <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Netflix</h3>
+                  <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">iMessage</h3>
                     <p className="feature-box__text ml-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
                     </p>
               </div>
               <div className="col-1-of-4">
                   <div className="feature-box-ml">
-                    
+                    <img src="img/youtube.png" alt="Youtube" className="circle-img"></img>
                   </div>
                   <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Youtube</h3>
                     <p className="feature-box__text ml-text">
@@ -72,7 +72,7 @@ const MachineLearning = (props) => {
               </div>
               <div className="col-1-of-4">
                   <div className="feature-box-ml">
-
+                    <img src="img/Amazon.png" alt="Amazon" className="circle-img"></img>
                   </div>
                       <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Amazon</h3>
                       <p className="feature-box__text ml-text">
