@@ -27,22 +27,32 @@
   /* grid-template-columns: repeat(12, 1fr); */
   grid-template-columns: repeat(12, minmax(max-content, 8.333%));
   /* grid-auto-rows: minmax(80px, auto); */
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(1, minmax(max-content, 1fr));
   /* position: fixed;
   overflow: hidden; */
+  /* justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center; */
 }
 
 .header-menu-home {
+  grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
 .header-menu-upload {
+  grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
 }
 
 .header-menu-about {
+  grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 4;
   /* font-size: 0.9em; */
@@ -50,15 +60,20 @@
 }
 
 .header-menu-login {
+  grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 12;
   grid-column-end: 13;
 }
 
 .header-content p {
-  float: left;
+  float: center;
   color: #000000;
-  padding: 35px 20px 7px 25px;
+  padding: 23px 30px 7px 30px;
   font-size: 1.5em;
+  /* margin: auto; */
+  /* text-align: center; */
+  
 }
 
 .header-content p:hover {
@@ -68,7 +83,7 @@
 
 .title {
   font-family: 'Amatic-SC', cursive;
-  font-size: 2.5em;
+  font-size: 3.5rem;
   text-align: center;
   justify-content: center;
   align-content: center;
@@ -77,11 +92,13 @@
   /* justify-content: space-evenly; */
   /* float: center; */
   /* grid-column-start: 5; */
-  grid-column-start: 6;
-  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
   /* grid-column-end: 9; */
-  padding-top: 2%;
-  margin-left: -10%;
+  padding-top: 1%;
+  /* margin-left: -10%; */
 }
 
 /* .logo {
