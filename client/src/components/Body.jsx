@@ -12,7 +12,8 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: ''
+      data: '',
+      chartType: 'line'
     }
   }
 
@@ -21,12 +22,13 @@ class Body extends React.Component {
     // console.log(this.state.data);
   }
 
-  updateState(key) {
+  updateState(key, chartType) {
     let context = this;
-    return (value, cb) => {
+    return (value, charttype, cb) => {
       // console.log(value);
       context.setState({
-        [key]: value
+        [key]: value,
+        [chartType]: charttype
       }, cb);
     }
   }
@@ -43,10 +45,10 @@ class Body extends React.Component {
         <Route
           path='/upload'
           render={ () => {
-            return (<Upload updateData={this.updateState('data')} data={this.state.data} />)
+            return (<Upload updateData={this.updateState('data', 'chartType')} data={this.state.data} />)
           } }
         />
-        
+
         <Route path='/machinelearning'
           component={ MachineLearning }
         />
@@ -57,7 +59,7 @@ class Body extends React.Component {
 
         <Route path='/chart'
           render={ () => {
-            return (<Chart data={this.state.data} />)
+            return (<Chart data={this.state.data} charttype={this.state.chartType}/>)
           } }
         />
 
