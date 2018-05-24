@@ -59,7 +59,7 @@ class Signup extends Component {
     return (
       <div className="Signup">
         <form>
-          <div>
+          <div className="signup-firstName">
             <label>First Name:</label>
             <input
               type="text"
@@ -69,7 +69,7 @@ class Signup extends Component {
             />
           </div>
 
-          <div>
+          <div className="signup-lastName">
             <label>Last Name:</label>
             <input
               type="text"
@@ -79,7 +79,7 @@ class Signup extends Component {
             />
           </div>
 
-          <div>
+          <div className="signup-email">
             <label>Email:</label>
             <input
               type="text"
@@ -89,7 +89,7 @@ class Signup extends Component {
             />
           </div>
 
-          <div>
+          <div className="signup-password">
             <label>Password:</label>
             <input 
               type="password" 
@@ -101,7 +101,7 @@ class Signup extends Component {
          
           <button
             type="button"
-            className="signup-btn"
+            className="signup-btn-2"
             onClick={this.sendInfo.bind(this)} 
           >
             Sign Up
