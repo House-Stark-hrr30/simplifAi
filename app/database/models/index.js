@@ -7,12 +7,26 @@ var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var db        = {};
 
-let config;
+let config = {};
+
 if(process.env.NODE_ENV === 'production') {
-  config = process.env.DB_CONFIG;
+  //config = process.env.DB_CONFIG;
+  config['username'] = process.env.DB_USERNAME;
+  config['password'] = process.env.DB_PASSWORD;
+  config['database'] = "simplifai_production";
+  config['host'] = process.env.DB_HOST;
+  config['dialect'] = "mysql";
+    // "username": "",
+    // "password": "",
+    // "database": "",
+    // "host": "",
+    // "dialect": ""
+
 } else {
   config = require(__dirname + '/../../../config.js').db_config[env];
 }
+
+
 
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
 
