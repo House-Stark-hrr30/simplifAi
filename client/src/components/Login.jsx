@@ -70,7 +70,7 @@ class Login extends Component {
       <div className="Login">
         {this.renderFailedAttempt()}
         <form>
-          <div>
+          <div className="login-email">
             <label>Email:</label>
             <input
               type="text"
@@ -80,7 +80,7 @@ class Login extends Component {
             />
           </div>
 
-          <div>
+          <div className="login-password">
             <label>Password:</label>
             <input 
               type="password" 
@@ -95,7 +95,7 @@ class Login extends Component {
             className="login-btn"
             onClick={this.sendLogin.bind(this)}
           >
-            Login
+            <p className="login-btn-text">Login</p>
           </button>
 
           <button 
