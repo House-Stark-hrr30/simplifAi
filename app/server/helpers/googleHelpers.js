@@ -4,9 +4,9 @@ let client_credentials = {};
 let credentials = {};
 
 if(process.env.NODE_ENV === 'production') {
-  client_credentials['client_secret'] = process.env.GOOGLE_CLIENT_SECRET;
-  client_credentials['client_id'] = process.env.GOOGLE_CLIENT_ID;
-  client_credentials['redirect_uris'] = [process.env.GOOGLE_CLIENT_URI];
+  client_credentials['installed']['client_secret'] = process.env.GOOGLE_CLIENT_SECRET;
+  client_credentials['installed']['client_id'] = process.env.GOOGLE_CLIENT_ID;
+  client_credentials['installed']['redirect_uris'] = [process.env.GOOGLE_CLIENT_URI];
 
   credentials['access_token']= process.env.CRED_ACCESS_TOKEN;
   credentials['token_type']= process.env.CRED_TOKEN_TYPE;
