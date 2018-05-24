@@ -44,7 +44,7 @@ class Dashboard extends Component {
                         <div className="feature-box">
                             <h3 className="heading-tertiary margin-bottom-small">Upload</h3>
                             <p className="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                Add data from Google Sheets or create your own!
                             </p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ class Dashboard extends Component {
                         <div className="feature-box">
                             <h3 className="heading-tertiary margin-bottom-small">Machine Learning</h3>
                             <p className="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                Discover more about machine learning and how it's useful!
                             </p>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ class Dashboard extends Component {
                         <div className="feature-box">
                             <h3 className="heading-tertiary margin-bottom-small">Data Types</h3>
                                 <p className="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                                Certain algorithms work best for certain types of data - find out more!
                             </p>
                         </div>
                     </div>

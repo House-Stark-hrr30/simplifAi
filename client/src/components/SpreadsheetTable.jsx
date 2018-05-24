@@ -87,18 +87,11 @@ class SpreadsheetTable extends Component {
       <div style={{
 
 }}>
-        <input style={{
-  'width': '200px',
-  'height': '18px',
-  'margin-right': '10px',
-  'font-size': '12px',
-  'font-family': 'Raleway',
-  'border-radius': '5px'
-}}
+        <input
         className="spreadsheet-input" type="text" placeholder="Enter your google sheet key" onChange={this.handleGoogleSheetIDChange.bind(this)} />
-        <button style={{'margin-right': '290px'}} type="button" className="import" onClick={this.handleImportClick.bind(this)}>Import</button>
+        <button type="button" className="import-btn" onClick={this.handleImportClick.bind(this)}>Import</button>
 
-        <button style={{'margin-left': '0px'}} className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
+        <button className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
         <button className="add-row-btn" onClick={this.addRow.bind(this)}>Add Row</button>
         </div>
         <Table

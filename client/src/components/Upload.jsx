@@ -199,7 +199,7 @@ class Upload extends Component {
           <div className="content">
             <div className="content-inside">
               <h2 className="heading-main">Machine Learning</h2>
-              <p className="heading-sub">Submit beta to get started!</p>
+              <p className="heading-sub">Submit data to get started!</p>
             </div>
           </div>
         </div>
@@ -210,9 +210,9 @@ class Upload extends Component {
               <div>
                 <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()} handleGoogleSheetIDChange={this.handleGoogleSheetIDChange.bind(this)} handleImportClick={this.handleImportClick.bind(this)} />
               </div>
-              <div style={{ 'margin': '2% 520px 0 0', 'display': 'inline-block'}}>
-                <label style={{'font-size': '12px', 'margin-right': '5px'}}>Chart Type:</label>
-                <select style={{'font-size': '12px', 'background-color': 'white'}} id="charts" onChange={this.changeChart.bind(this)}>
+              <div className="bottom-btns">
+                <label className="chart-dropdown-label">Chart Type:</label>
+                <select id="charts" onChange={this.changeChart.bind(this)}>
                   <option value="line">Line</option>
                   <option value="bar">Bar</option>
                   <option value="pie">Pie</option>
