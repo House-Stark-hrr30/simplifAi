@@ -1,13 +1,22 @@
 /***************** Handles Google Requests *****************/
 
-let client_secret;
-let credentials;
+let client_credentials = {};
+let credentials = {};
 
 if(process.env.NODE_ENV === 'production') {
-  client_secret = process.env.client_secret;
-  credentials = process.env.credentials;
+  client_credentials['client_secret'] = process.env.GOOGLE_CLIENT_SECRET;
+  client_credentials['client_id'] = process.env.GOOGLE_CLIENT_ID;
+  client_credentials['redirect_uris'] = [process.env.GOOGLE_CLIENT_URI];
+
+  credentials['access_token']= process.env.CRED_ACCESS_TOKEN;
+  credentials['token_type']= process.env.CRED_TOKEN_TYPE;
+  credentials['refresh_token'] = process.env.CRED_REFRESH_TOKEN;
+  credentials['expiry_date'] = process.env.CRED_EXPIRY_DATE;
+
+  //client_credentials = process.env.client_credentials;
+  //credentials = process.env.credentials;
 } else {
-  client_secret = require('../../../config').client_secret;
+  client_credentials = require('../../../config').client_credentials;
   credentials = require('../../../config').credentials;
 }
 
@@ -24,7 +33,7 @@ const TOKEN_PATH = '../../../.json';
 const path = require('path');
 
 function getSpreadsheetData(res, googleSheetID) {
-    authorize(JSON.parse(client_secret), pullSpreadsheetData, res, googleSheetID);
+    authorize(client_credentials, pullSpreadsheetData, res, googleSheetID);
 };
 
 /**
@@ -33,13 +42,12 @@ function getSpreadsheetData(res, googleSheetID) {
  * @param {Object} credentials The authorization client credentials.
  * @param {callback} callback The callback to call with the authorized client.
  */
-function authorize(credentials, callback, res, googleSheetID) {
+function authorize(client_credentials, callback, res, googleSheetID) {
   console.log('Entered authorize....');
 
-  const {client_secret, client_id, redirect_uris} = credentials.installed;
+  const {client_secret, client_id, redirect_uris} = client_credentials.installed;
   const oAuth2Client = new OAuth2Client(client_id, client_secret, redirect_uris[0]);
-
-  oAuth2Client.setCredentials(JSON.parse(credentials));
+  oAuth2Client.setCredentials(credentials);
   callback(oAuth2Client, res, googleSheetID);
 }
 

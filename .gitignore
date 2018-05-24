@@ -24,3 +24,6 @@ yarn-error.log*
 
 # config files
 config.js
+
+# bundle file
+bundle.js
