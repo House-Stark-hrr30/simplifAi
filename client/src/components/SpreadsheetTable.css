@@ -40,3 +40,20 @@
 .table-area {
   margin-top: 3%;
 }
+
+.spreadsheet-input {
+  width: 200px;
+  height: 18px;
+  margin-right': 10px;
+  font-size': 12px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 5px;
+}
+
+.import-btn {
+  margin-right: 290px;
+}
+
+.add-col-btn {
+  margin-left: 0px;
+}

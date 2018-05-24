@@ -203,3 +203,18 @@ grid_item .content-inside {
 .submit[disabled]:hover {
   cursor: not-allowed;
 }
+
+#charts {
+  font-size: 12px;
+  background-color: white;
+}
+
+.chart-dropdown-label {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.bottom-btns {
+  margin: 2% 520px 0 0;
+  display: inline-block;
+}
