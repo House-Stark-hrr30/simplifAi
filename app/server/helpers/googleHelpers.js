@@ -1,7 +1,7 @@
 /***************** Handles Google Requests *****************/
 // import client secret from config
-import { client_secret, credentials } from "../../../config";
-
+const client_secret = process.env.client_secret || require('../../../config').client_secret;
+const credentials = process.env.credentials || require('../../../config').credentials;
 
 const fs = require('fs');
 const readline = require('readline');

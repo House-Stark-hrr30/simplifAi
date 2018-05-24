@@ -4,7 +4,7 @@ import { SERVER_PORT } from '../../config';
 
 
 // set the port based on environment or use default if not set
-const PORT = SERVER_PORT || 3000;
+const PORT = process.env.PORT || SERVER_PORT;
 
 // start the server
 app.listen(PORT, () => {
