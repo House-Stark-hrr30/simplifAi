@@ -1,8 +1,14 @@
+let secret;
+
 //import secret from config
-import { SESSION_SECRET } from '../../../config';
+if(process.env.NODE_ENV === 'production') {
+  secret = process.env.SESSION_SECRET;
+} else {
+  secret = "I_am_a_secret";
+}
 
 const expressSessionSettings = {
-  secret: process.env.SESSION_SECRET || "I_am_a_secret",
+  secret: secret,
   resave: false, // only saves on update
   saveUninitialized: false // only saves on login
 };

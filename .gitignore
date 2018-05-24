@@ -8,9 +8,6 @@ package-lock.json
 # testing
 /coverage
 
-# production
-bundle.js
-
 # misc
 .DS_Store
 .env
@@ -27,6 +24,3 @@ yarn-error.log*
 
 # config files
 config.js
-
-# bundles.js
-bundles.js
