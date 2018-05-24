@@ -2,9 +2,7 @@ import app from './app';
 // import port
 //import { SERVER_PORT } from '../../config';
 
-if(process.env.NODE_ENV === 'production') {
-  PORT = process.env.PORT;
-} else {
+if(process.env.NODE_ENV !== 'production') {
   PORT = 3000;
 }
 
