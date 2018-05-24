@@ -1,7 +1,7 @@
 import app from './app';
 // import port
 //import { SERVER_PORT } from '../../config';
-
+let PORT;
 if(process.env.NODE_ENV === 'production') {
   PORT = process.env.PORT;
 } else {
