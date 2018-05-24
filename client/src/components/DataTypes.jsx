@@ -85,10 +85,10 @@ class DataTypes extends Component {
       speed: 3000,
       autoplaySpeed: 3000,
       cssEase: "linear",
-      // arrows: true
-      arrows: true,
-      prevArrow: < CustomPrevArrow />,
-      nextArrow: < CustomNextArrow />,
+      arrows: false
+      // arrows: true,
+      // prevArrow: < CustomPrevArrow />,
+      // nextArrow: < CustomNextArrow />,
       // centerMode: true
     };
     return (

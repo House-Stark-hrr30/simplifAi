@@ -3,6 +3,25 @@
 ******************************
 */
 
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    /* background: #fff url('./ajax-loader.gif') center center no-repeat; */
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    /* src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg'); */
+}
+
+
 /* Slider */
 .slick-slider
 {
@@ -123,23 +142,8 @@
     display: none;
 }
 
-@charset 'UTF-8';
-/* Slider */
-/* .slick-loading .slick-list
-{
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
-} */
 
-/* Icons */
-/* @font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-} */
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -196,7 +200,8 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    /* color: white; */
+    color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -213,7 +218,7 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '<';
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -231,7 +236,7 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '>';
 }
 [dir='rtl'] .slick-next:before
 {
@@ -304,7 +309,7 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 50px;
     line-height: 20px;
 
     position: absolute;
@@ -405,7 +410,7 @@
   .slick-list {
     /* margin: 0 -10px; */
     margin: auto;
-    width: 80%;
+    width: 95%;
     height: 300px;
   }
   
@@ -462,9 +467,9 @@
     background: black;
   }
   
-  .hide {
+  /* .hide {
     display: none;
-  }
+  } */
   
   .footer1 {
     height: 100px;
@@ -497,7 +502,7 @@
     opacity: 0.01;
   }
   
-  .example-enter.example-enter-active {
+  /* .example-enter.example-enter-active {
     opacity: 1;
     transition: opacity .5s ease-in;
   }
@@ -512,4 +517,4 @@
   .example-leave.example-leave-active {
     opacity: 0.01;
     transition: opacity .5s ease-in;
-  }
+  } */
