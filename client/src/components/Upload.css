@@ -115,7 +115,7 @@ grid_item .content-inside {
   outline: 0;
   width: 5em;
   height: 2em;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
 }
 
 .Upload button:hover {
@@ -171,7 +171,7 @@ grid_item .content-inside {
   height: 18px;
   margin-right: 10px;
   font-size: 12px;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   border-radius: 5px;
 }
 
@@ -202,4 +202,19 @@ grid_item .content-inside {
 
 .submit[disabled]:hover {
   cursor: not-allowed;
+}
+
+#charts {
+  font-size: 12px;
+  background-color: white;
+}
+
+.chart-dropdown-label {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.bottom-btns {
+  margin: 2% 520px 0 0;
+  display: inline-block;
 }

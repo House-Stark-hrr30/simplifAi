@@ -87,7 +87,7 @@
   outline: 0;
   width: 5em;
   height: 2em;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
 }
 
 .upload-btn:hover {
