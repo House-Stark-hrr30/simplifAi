@@ -13,7 +13,7 @@ if(process.env.NODE_ENV === 'production') {
   //config = process.env.DB_CONFIG;
   config['username'] = process.env.DB_USERNAME;
   config['password'] = process.env.DB_PASSWORD;
-  config['database'] = "simplifai_production";
+  config['database'] = "heroku_9cbde74996b3fda";
   config['host'] = process.env.DB_HOST;
   config['dialect'] = "mysql";
     // "username": "",
