@@ -1,6 +1,7 @@
 /***************** Handles Google Requests *****************/
 
 let client_credentials = {};
+client_credentials['installed'] = {};
 let credentials = {};
 
 if(process.env.NODE_ENV === 'production') {
