@@ -1,7 +1,19 @@
 /***************** Handles Google Requests *****************/
+
+let client_secret;
+let credentials;
+
+if(process.env.NODE_ENV === 'production') {
+  client_secret = process.env.client_secret;
+  credentials = process.env.credentials;
+} else {
+  client_secret = require('../../../config').client_secret;
+  credentials = require('../../../config').credentials;
+}
+
 // import client secret from config
-const client_secret = process.env.client_secret || require('../../../config').client_secret;
-const credentials = process.env.credentials || require('../../../config').credentials;
+//const client_secret = process.env.client_secret || require('../../../config').client_secret;
+//const credentials = process.env.credentials || require('../../../config').credentials;
 
 const fs = require('fs');
 const readline = require('readline');

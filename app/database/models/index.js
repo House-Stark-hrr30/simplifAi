@@ -5,9 +5,14 @@ var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
-var config    = process.env.DB_CONFIG || require(__dirname + '/../../../config.js').db_config[env];
 var db        = {};
 
+let config;
+if(process.env.NODE_ENV === 'production') {
+  config = process.env.DB_CONFIG;
+} else {
+  config = require(__dirname + '/../../../config.js').db_config[env];
+}
 
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
 
