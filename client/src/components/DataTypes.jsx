@@ -5,6 +5,7 @@ import Slider from "react-slick";
 // import "./slick/slick.css";
 // import "./slick/slick-theme.css";
 import "./DataTypes.css";
+import Card from './Card.jsx';
 
 
 class DataTypes extends Component {
@@ -81,7 +82,7 @@ class DataTypes extends Component {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       speed: 3000,
       autoplaySpeed: 3000,
       cssEase: "linear",
@@ -100,7 +101,8 @@ class DataTypes extends Component {
             <img className="img-1" alt="1" src="img/wolf.png"></img>
           </div>
           <div>
-            <h3>2</h3>
+            {/* <h3>2</h3> */}
+            <Card title="Hello" body="What's up?" />
           </div>
           <div>
             <h3>3</h3>
