@@ -92,7 +92,7 @@ class SpreadsheetTable extends Component {
   'height': '18px',
   'margin-right': '10px',
   'font-size': '12px',
-  'font-family': 'Raleway',
+  'font-family': '"Raleway", sans-serif',
   'border-radius': '5px'
 }}
         className="spreadsheet-input" type="text" placeholder="Enter your google sheet key" onChange={this.handleGoogleSheetIDChange.bind(this)} />

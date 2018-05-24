@@ -115,7 +115,7 @@ grid_item .content-inside {
   outline: 0;
   width: 5em;
   height: 2em;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
 }
 
 .Upload button:hover {
@@ -171,7 +171,7 @@ grid_item .content-inside {
   height: 18px;
   margin-right: 10px;
   font-size: 12px;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   border-radius: 5px;
 }
 

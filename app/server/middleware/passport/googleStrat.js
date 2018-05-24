@@ -10,10 +10,9 @@ if(process.env.NODE_ENV === 'production') {
   GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
   GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 } else {
-  GOOGLE_CLIENT_ID = require('../../../config').GOOGLE_CLIENT_ID;
-  GOOGLE_CLIENT_SECRET = require('../../../config').GOOGLE_CLIENT_SECRET;
+  GOOGLE_CLIENT_ID = require('../../../../config').GOOGLE_CLIENT_ID;
+  GOOGLE_CLIENT_SECRET = require('../../../../config').GOOGLE_CLIENT_SECRET;
 }
-
 
 //const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || require('../../../../config').GOOGLE_CLIENT_ID;
 //const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || require('../../../../config').GOOGLE_CLIENT_SECRET;
