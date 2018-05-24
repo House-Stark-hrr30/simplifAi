@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 
 const Home = (props) => {
@@ -16,17 +17,16 @@ const Home = (props) => {
               <div className="col-1-of-2">
                   <h3 className="heading-tertiary margin-bottom-small">Use SimplifAi to simplify your life</h3>
                   <p className="paragraph">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                      ducimus quam nisi exercitationem omnis earum qui.
+                      Find trends within any data that you might have - predict business metrics, discover commonalities between your favorite beverages, or even identify your historical purchasing trends!
                   </p>
                   <h3 className="heading-tertiary margin-bottom-small">Discover new things about your data</h3>
                   <p className="paragraph">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                      <Link className="link" to='/machinelearning'>Machine learning</Link> enables software to learn about your data, ultimately deciphering trends and making predictions in a number of ways!  Check some of them out <Link className="link" to="/datatypes">here!</Link>
                   </p>
               </div>
               <div>
                   <div className="home-composition">
-                      <img alt="Photo 1"
+                      <img alt="office"
                           className="home-composition__photo home-composition__photo--p1"
                           src="img/office_2.jpeg"/>
                   </div>
@@ -43,7 +43,7 @@ const Home = (props) => {
                   <div className="feature-box">
                       <h3 className="heading-tertiary margin-bottom-small">Explore your data</h3>
                       <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                        See your data in a different light with our attractive graphs and easy-to-read charts!
                       </p>
                   </div>
               </div>
@@ -51,15 +51,15 @@ const Home = (props) => {
                   <div className="feature-box">
                       <h3 className="heading-tertiary margin-bottom-small">Save time</h3>
                       <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                        By importing your data from Google Sheets, you can get more out of the data that you already have.
                       </p>
                   </div>
               </div>
               <div className="col-1-of-4">
                   <div className="feature-box">
                       <h3 className="heading-tertiary margin-bottom-small">Combine your data</h3>
-                          <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                      <p className="feature-box__text">
+                        Is your data stored across multiple sheets?  Import them one after the other to gain an insight on all of them at once!
                       </p>
                   </div>
               </div>
@@ -67,7 +67,7 @@ const Home = (props) => {
                   <div className="feature-box">
                       <h3 className="heading-tertiary margin-bottom-small">Versatile support</h3>
                       <p className="feature-box__text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                        Our variety of machine learning methods give you the power to decide how your data is analyzed!
                       </p>
                   </div>
               </div>
@@ -92,9 +92,7 @@ const Home = (props) => {
                   <div className="story__text">
                       <h3 className="heading-tertiary margin-bottom-small">I had a great time using SimplifAi</h3>
                       <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                          ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                          repellat quis consequatur ducimus quam nisi exercitationem omnis.
+                          SimplifAi made analyzing the data from all of my students easy!  Of course, the creators were my favorite students, but now I can truly measure how much better I liked them than any others!
                       </p>
                   </div>
               </div>
@@ -108,9 +106,7 @@ const Home = (props) => {
                   <div className="story__text">
                       <h3 className="heading-tertiary margin-bottom-small">SimplifAi really changed my life</h3>
                       <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                          ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                          repellat quis consequatur ducimus quam nisi exercitationem omnis.
+                          Grumble grumble.  I need to find a job.  How can I find a job when I have to compete with this?!
                       </p>
                   </div>
               </div>
