@@ -38,8 +38,10 @@
 }
 
 .table-area {
-  margin: 40px auto 20px auto;
-  width: 50%;
+  /*margin: 40px auto 20px auto;
+  width: 50%;*/
+  margin-top: 40px;
+  text-align: center;
 }
 
 .spreadsheet-input {
@@ -52,9 +54,13 @@
 }
 
 .import-btn {
-  margin-right: 39%;
+  margin-right: 20%;
 }
 
 .add-col-btn {
   margin-left: 0px;
+}
+
+.table-style {
+  text-align: -webkit-center;
 }

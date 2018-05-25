@@ -175,13 +175,13 @@ class Chart extends Component {
   render() {
     let chartView = this.chooseView();
     return (
-      <div>
+      <div className="chart-chart">
        <div className="chart-style-chart">
         {chartView}
         </div>
         <div className="chart-btns-chart">
           <label className="chart-dropdown-chart">Chart Type:</label>
-          <select id="charts" onChange={this.changeChart.bind(this)}>
+          <select id="chart-charts" onChange={this.changeChart.bind(this)}>
             <option value="line">Line</option>
             <option value="bar">Bar</option>
             <option value="pie">Pie</option>

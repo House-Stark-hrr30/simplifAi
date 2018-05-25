@@ -217,7 +217,7 @@ grid_item .content-inside {
 }
 
 .chart-dropdown {
-  margin: 2% 71.8% 0 0;
+  margin: 2% 20% 0 0;
   display: inline-block;
 }
 
@@ -226,6 +226,7 @@ grid_item .content-inside {
 }
 
 .bottom-btns {
-  margin: auto;
-  width: 50%;
+  /*margin: auto;
+  width: 50%;*/
+  text-align: center;
 }
