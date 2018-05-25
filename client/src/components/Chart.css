@@ -1,0 +1,13 @@
+.chart-style {
+  width: 800px;
+  margin: 2% auto 2% auto;
+}
+
+.chart-dropdown {
+  font-size: 12px;
+}
+
+#charts {
+  font-size: 12px;
+  background-color: white;
+}
