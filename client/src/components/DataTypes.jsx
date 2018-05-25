@@ -5,6 +5,9 @@ import Slider from "react-slick";
 // import "./slick/slick.css";
 // import "./slick/slick-theme.css";
 import "./DataTypes.css";
+import Card from './Card.jsx';
+import CustomPrevArrow from 'react-icons/lib/fa/chevron-circle-left';
+import CustomNextArrow from 'react-icons/lib/fa/chevron-circle-right';
 
 
 class DataTypes extends Component {
@@ -13,7 +16,30 @@ class DataTypes extends Component {
     this.state = {
 
     }
+
+    // this.prev = this.prev.bind(this);
+    // this.next = this.next.bind(this);
   }
+
+  next() {
+    this.slider.slickNext();
+  }
+  previous() {
+    this.slider.slickPrev();
+  }
+
+  // CustomPrevArrow(props) { 
+  //   return (
+  //     <button type="button" className="slick-prev" onClick={this.prev}>Previous</button>
+  //   );
+  // };
+
+  // CustomNextArrow(props) {
+  //   return (
+  //     <button type="button" className="slick-next" onclick={this.next}>Next</button>
+  //   );
+  // };
+  
 
   render() {
     // const settings = {
@@ -81,26 +107,30 @@ class DataTypes extends Component {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
-      speed: 3000,
-      autoplaySpeed: 3000,
+      // autoplay: true,
+      speed: 1000,
+      // autoplaySpeed: 3000,
       cssEase: "linear",
-      arrows: false
-      // arrows: true,
-      // prevArrow: < CustomPrevArrow />,
-      // nextArrow: < CustomNextArrow />,
+      // arrows: false,
+      prevArrow: < CustomPrevArrow id="slick-prev"/>,
+      nextArrow: < CustomNextArrow id="slick-next"/>,
       // centerMode: true
     };
     return (
       <div className="carousel">
         <h2 className="carousel-heading">Data Types</h2>
+        {/* <CustomPrevArrow onClick={this.prev}>Previous</CustomPrevArrow>  <CustomNextArrow onClick={this.next}>Next</CustomNextArrow> */}
+        
+        <div>
+        {/* <CustomPrevArrow  onClick={this.prev}>Previous</CustomPrevArrow> */}
         <Slider {...settings}>
           {/* <button type="button" className="slick-prev">Previous</button> */}
           <div className="card-1 Slider">
             <img className="img-1" alt="1" src="img/wolf.png"></img>
           </div>
           <div>
-            <h3>2</h3>
+            {/* <h3>2</h3> */}
+            <Card title="Hello" body="What's up?" />
           </div>
           <div>
             <h3>3</h3>
@@ -114,27 +144,29 @@ class DataTypes extends Component {
           <div>
             <h3>6</h3>
           </div>
-
           {/* <button type="button" className="slick-next">Next</button> */}
         </Slider>
+        {/* < CustomNextArrow className="slick-next slick-next-real" onClick={this.next}>Next</ CustomNextArrow> */}
+        </div>
+
       </div>
     );
   }
 }
 
-const CustomPrevArrow = props => { 
-  return (
-    <button type="button" className="slick-prev">Previous</button>
-  );
-};
+// const CustomPrevArrow = props => { 
+//   return (
+//     <button type="button" className="slick-prev slick-prev-real">Previous</button>
+//   );
+// };
 
-const CustomNextArrow = props => {
-  return (
-    // <div {...this.props}>
-    //   <img src="/images/arrow_prev.png" />
-    // </div>
-    <button type="button" className="slick-next">Next</button>
-  );
-};
+// const CustomNextArrow = props => {
+//   return (
+//     // <div {...this.props}>
+//     //   <img src="/images/arrow_prev.png" />
+//     // </div>
+//     <button type="button" className="slick-next slick-next-real">Next</button>
+//   );
+// };
 
 export default DataTypes;

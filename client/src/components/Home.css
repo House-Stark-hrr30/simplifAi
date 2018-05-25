@@ -175,11 +175,13 @@
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
+  min-height: 263px;
 }
 
 @media only screen and (max-width: 56.25em) {
   .feature-box {
     padding: 2rem;
+    min-height: 158px;
   }
 }
 
@@ -314,4 +316,9 @@
   .section-stories {
     padding: 10rem 0;
   }
+}
+
+.link {
+  text-decoration: underline;
+  color: #666;
 }
