@@ -195,35 +195,35 @@ class Upload extends Component {
     return (
       <div className="Upload">
 
-        <div className="grid__item">
-          <div className="content">
-            <div className="content-inside">
+        <div>
+          <div>
+            <div className="titles">
               <h2 className="heading-main">Machine Learning</h2>
               <p className="heading-sub">Submit data to get started!</p>
             </div>
           </div>
         </div>
 
-        <div className="grid__item table-section">
-          <div className="content">
-            <div className="content-inside">
+        <div>
+          <div>
+            <div>
               <div>
                 <SpreadsheetTable spreadSheetData={this.state.spreadSheetData} toggleModal={this.toggleModal()} handleGoogleSheetIDChange={this.handleGoogleSheetIDChange.bind(this)} handleImportClick={this.handleImportClick.bind(this)} />
               </div>
               <div className="bottom-btns">
-                <label className="chart-dropdown-label">Chart Type:</label>
-                <select id="charts" onChange={this.changeChart.bind(this)}>
-                  <option value="line">Line</option>
-                  <option value="bar">Bar</option>
-                  <option value="pie">Pie</option>
-                  <option value="radar">Radar</option>
-                  <option value="doughnut">Doughnut</option>
-                  <option value="polar">Polar</option>
-                </select>
+                <div className="chart-dropdown">
+                  <label className="chart-dropdown-label">Chart Type:</label>
+                  <select id="charts" onChange={this.changeChart.bind(this)}>
+                    <option value="line">Line</option>
+                    <option value="bar">Bar</option>
+                    <option value="pie">Pie</option>
+                    <option value="radar">Radar</option>
+                    <option value="doughnut">Doughnut</option>
+                    <option value="polar">Polar</option>
+                  </select>
+                </div>
+                <button type="button" className="submit" disabled={this.state.spreadSheetData.length === 0} onClick={this.sendDataToChart.bind(this)}>Submit</button>
               </div>
-              <button type="button" className="submit" disabled={this.state.spreadSheetData.length === 0} onClick={this.sendDataToChart.bind(this)}>Submit</button>
-              <form>
-              </form>
             </div>
           </div>
         </div>

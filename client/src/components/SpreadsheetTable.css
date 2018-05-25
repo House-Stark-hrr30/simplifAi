@@ -28,17 +28,18 @@
   background: #eee;
 }
 
-.content-inside .add-col-btn {
+.table-area .add-col-btn {
   width: 7em;
   margin-right: 2%;
 }
 
-.content-inside .add-row-btn {
+.table-area .add-row-btn {
   width: 7em;
 }
 
 .table-area {
-  margin-top: 3%;
+  margin: 40px auto 20px auto;
+  width: 50%;
 }
 
 .spreadsheet-input {
@@ -51,7 +52,7 @@
 }
 
 .import-btn {
-  margin-right: 290px;
+  margin-right: 39%;
 }
 
 .add-col-btn {

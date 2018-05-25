@@ -25,4 +25,9 @@ yarn-error.log*
 # config files
 config.js
 
+<<<<<<< HEAD
 client/build/bundle.js
+=======
+# bundle file
+bundle.js
+>>>>>>> 3ea85370ef0a36b5189dd38f3152882203411f68

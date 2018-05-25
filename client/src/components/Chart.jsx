@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie, Radar, Doughnut, Polar} from 'react-chartjs-2';
 import ReactDOM from 'react-dom';
+import './Chart.css';
 
 class Chart extends Component {
   constructor(props) {
@@ -175,12 +176,12 @@ class Chart extends Component {
     let chartView = this.chooseView();
     return (
       <div>
-       <div style={{'width': '800px', 'margin': '2% auto 2% auto'}}>
+       <div className="chart-style-chart">
         {chartView}
         </div>
-        <div>
-          <label style={{'font-size': '12px'}}>Chart Type:</label>
-          <select style={{'font-size': '12px', 'background-color': 'white'}} id="charts" onChange={this.changeChart.bind(this)}>
+        <div className="chart-btns-chart">
+          <label className="chart-dropdown-chart">Chart Type:</label>
+          <select id="charts" onChange={this.changeChart.bind(this)}>
             <option value="line">Line</option>
             <option value="bar">Bar</option>
             <option value="pie">Pie</option>

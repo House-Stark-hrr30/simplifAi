@@ -15,13 +15,12 @@ const About = (props) => {
           <div className="col-1-of-2">
             <h3 className="heading-tertiary margin-bottom-small">We are dedicated to your success</h3>
             <p className="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-              ducimus quam nisi exercitationem omnis earum qui.
+              Look at all these random words that I wrote!  How exciting!
           </p>
 
             <h3 className="heading-tertiary margin-bottom-small">We value your data and privacy</h3>
             <p className="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+              Sharing may be caring, but not in this case!  We'll never share your personal information or your data with anyone!
           </p>
 
           </div>
