@@ -126,23 +126,26 @@ class DataTypes extends Component {
         <Slider {...settings}>
           {/* <button type="button" className="slick-prev">Previous</button> */}
           <div className="card-1 Slider">
-            <img className="img-1" alt="1" src="img/wolf.png"></img>
+            <div>
+              <img className="img-carousel" alt="1" src="img/wolf.png"></img>
+              {/* <Card title="Hello" body="What's up?" /> */}
+            </div>
           </div>
           <div>
             {/* <h3>2</h3> */}
-            <Card title="Hello" body="What's up?" />
+            <Card title="Eric" body='"Failure is the first step to success."' />
           </div>
           <div>
-            <h3>3</h3>
+            <Card title="Felipe" body="I hate heroku" />
           </div>
           <div>
-            <h3>4</h3>
+            <Card title="Tanner" body="This thing hates life" />
           </div>
           <div>
-            <h3>5</h3>
+            <Card title="Leo" body="WTF" />
           </div>
           <div>
-            <h3>6</h3>
+            <Card title="Ralph" body="*grumble grumble*" />
           </div>
           {/* <button type="button" className="slick-next">Next</button> */}
         </Slider>

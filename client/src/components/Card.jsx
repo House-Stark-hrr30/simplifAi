@@ -12,10 +12,10 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="col">
-          <div className="feature-box">
-              <h3 className="heading-tertiary margin-bottom-small">{this.props.title}</h3>
-              <p className="feature-box__text">
+      <div className="col col-card">
+          <div className="feature-box feature-box-card">
+              <h3 className="heading-tertiary margin-bottom-small card-title">{this.props.title}</h3>
+              <p className="feature-box__text card-body">
                   {this.props.body}
               </p>
           </div>

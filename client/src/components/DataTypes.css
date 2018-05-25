@@ -371,12 +371,17 @@
   
   }
   
-  .img-1 {
+  .img-carousel {
     /* height: 50px; */
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     object-fit: cover;
     /* float: center; */
+    opacity: .15;
+  }
+
+  .img-carousel:hover {
+
   }
   
   /* ended up switching in slick-theme.css instead */
@@ -443,7 +448,8 @@
   .slick-slide {
     height: 40vh;
     width: 50vw;
-    background: #f3a803;
+    /* background: #bbb; */
+    background: #eee;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -532,4 +538,21 @@
 
 #slick-prev, #slick-next {
     color: #777;
+}
+
+.col-card {
+    height: 310px !important;
+}
+
+.feature-box-card {
+    height: 310px !important;
+    background-color: #eee;
+}
+
+.card-title {
+    color: #777 !important;
+}
+
+.card-body {
+    color: #777 !important;
 }
