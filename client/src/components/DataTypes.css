@@ -398,9 +398,17 @@
     margin-left: 40px;
     /* margin: auto; */
   }
+
+  .slick-prev-real:before {
+    color: white !important;
+  }
   
   .slick-next {
     margin-right: 40px;
+  }
+
+  .slick-next-real:before {
+    color: white !important;
   }
   
   /* .slick-next {
@@ -410,7 +418,7 @@
   .slick-list {
     /* margin: 0 -10px; */
     margin: auto;
-    width: 95%;
+    width: 90%;
     height: 300px;
   }
   
@@ -444,6 +452,8 @@
   .slick-slide div {
     display: table-cell;
     vertical-align: middle;
+    min-width: 432px;
+    min-height: 310px;
   }
   
   .slick-dots {

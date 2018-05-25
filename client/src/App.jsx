@@ -58,7 +58,7 @@ class App extends Component {
           show={this.state.isOpen}
           onClose={this.toggleModal()}
           component={this.state.currentModal}
-          updateUser={this.setUser.bind(this)}
+          // updateUser={this.setUser.bind(this)}
         />
       </div>
     );
