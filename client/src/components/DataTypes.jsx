@@ -9,6 +9,8 @@ import Card from './Card.jsx';
 import CustomPrevArrow from 'react-icons/lib/fa/chevron-circle-left';
 import CustomNextArrow from 'react-icons/lib/fa/chevron-circle-right';
 
+import Info from './DataTypeInfo.jsx';
+
 
 class DataTypes extends Component {
   constructor(props) {
@@ -125,28 +127,10 @@ class DataTypes extends Component {
         {/* <CustomPrevArrow  onClick={this.prev}>Previous</CustomPrevArrow> */}
         <Slider {...settings}>
           {/* <button type="button" className="slick-prev">Previous</button> */}
-          <div className="card-1 Slider">
-            <div>
-              <img className="img-carousel" alt="1" src="img/wolf.png"></img>
-              {/* <Card title="Hello" body="What's up?" /> */}
-            </div>
-          </div>
-          <div>
-            {/* <h3>2</h3> */}
-            <Card title="EricTannericTannericTannericTannericTannericTannericTannericTannericTannericTannericTanneric" body='"Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success."' />
-          </div>
-          <div>
-            <Card title="Felipe" body="I hate heroku" />
-          </div>
-          <div>
-            <Card title="Tanner" body="This thing hates life" />
-          </div>
-          <div>
-            <Card title="Leo" body="WTF" />
-          </div>
-          <div>
-            <Card title="Ralph" body="*grumble grumble*" />
-          </div>
+          {Info.map((dataType, index) => (<div className={`card-${index} Slider`} key={index}>
+            <Card title={dataType.title} body={dataType.body} />
+            </div>))}
+          
           {/* <button type="button" className="slick-next">Next</button> */}
         </Slider>
         {/* < CustomNextArrow className="slick-next slick-next-real" onClick={this.next}>Next</ CustomNextArrow> */}
