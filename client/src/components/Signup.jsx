@@ -29,7 +29,7 @@ class Signup extends Component {
   }
 
   sendInfo() { 
-    axios.post('/user/signup', this.state)
+    axios.post('/user/signup', this.state.credentials)
       .then(user => {
         console.log(user);
         this.props.toggleModal(null, () => this.props.history.push('/about'));

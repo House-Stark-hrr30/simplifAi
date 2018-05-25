@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Dashboard.css';
 import Upload from './Upload.jsx';
 import {Link} from 'react-router-dom';
+import Card from './Card.jsx';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -71,6 +72,8 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 </Link>
+
+                {/* <Card title="TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest" body="This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!" /> */}
 
             </div>
         </div>

@@ -4,7 +4,7 @@ import './About.css';
 const About = (props) => {
   return (
     <div>
-      <div className="section-about">
+      <div className="section-aboutUs">
         <div className="center-text margin-bottom-big">
           <h1 className="heading-main">
             Meet the team behind SimplifAi
