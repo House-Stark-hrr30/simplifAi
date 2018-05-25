@@ -38,11 +38,11 @@
   transition: -webkit-transform .3s;
   transition: transform .3s;
   max-height: 172px;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .feature-box > h3 {
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -112,5 +112,5 @@
 }
 
 .feature-box__text {
-  overflow: scroll;
+  /* overflow: scroll; */
 }

@@ -9,8 +9,6 @@ import Card from './Card.jsx';
 import CustomPrevArrow from 'react-icons/lib/fa/chevron-circle-left';
 import CustomNextArrow from 'react-icons/lib/fa/chevron-circle-right';
 
-import Info from './DataTypeInfo.jsx';
-
 
 class DataTypes extends Component {
   constructor(props) {
@@ -107,7 +105,7 @@ class DataTypes extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       // autoplay: true,
       speed: 1000,
@@ -127,10 +125,33 @@ class DataTypes extends Component {
         {/* <CustomPrevArrow  onClick={this.prev}>Previous</CustomPrevArrow> */}
         <Slider {...settings}>
           {/* <button type="button" className="slick-prev">Previous</button> */}
-          {Info.map((dataType, index) => (<div className={`card-${index} Slider`} key={index}>
+
+          {/* {Info.map((dataType, index) => (<div  key={index}>
             <Card title={dataType.title} body={dataType.body} />
-            </div>))}
-          
+            </div>))} */}
+
+          {/* <div className="card-1 Slider">
+            <div>
+              <img className="img-carousel" alt="1" src="img/wolf.png"></img> */}
+              {/* <Card title="Hello" body="What's up?" /> */}
+            {/* </div>
+          </div> */}
+          {/* <div> */}
+            {/* <h3>2</h3> */}
+            {/* <Card title="EricTannericTannericTannericTannericTannericTannericTannericTannericTannericTannericTanneric" body='"Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success."' />
+          </div> */}
+          <div>
+            <Card title="Clustering" body="Useful for organizing your data into groups based on similarities across columns.  By clustering wines from around the world based on flavor profile and country of origin, clustering could potentially bundle wines into wine regions of the world without ever knowing that wine regions exist." />
+          </div>
+          <div>
+            <Card title="Decision Trees" body="Decision trees dynamically decide what information is most important to find an end-result.  Passing in HIPA-compliant medical records, an insurance company use metrics to build a tree to determine a person's chances of having hypertension.  The tree would probably decide that the most important metric is age and the second most important is weight.  (Remember, our machines are not doctors, though!)" />
+          </div>
+          <div>
+            <Card title="Neutral Networks" body="Neural Networks can be trained to find relationships between data.  We have used a very primitive neural network to teach a computer how to recognize colors by their numeric values, but they are capable of so much more!" />
+          </div>
+          {/* <div>
+            <Card title="Ralph" body="*grumble grumble*" /> */}
+          {/* </div> */}
           {/* <button type="button" className="slick-next">Next</button> */}
         </Slider>
         {/* < CustomNextArrow className="slick-next slick-next-real" onClick={this.next}>Next</ CustomNextArrow> */}
