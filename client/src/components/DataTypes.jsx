@@ -133,7 +133,7 @@ class DataTypes extends Component {
           </div>
           <div>
             {/* <h3>2</h3> */}
-            <Card title="Eric" body='"Failure is the first step to success."' />
+            <Card title="EricTannericTannericTannericTannericTannericTannericTannericTannericTannericTannericTanneric" body='"Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success.""Failure is the first step to success."' />
           </div>
           <div>
             <Card title="Felipe" body="I hate heroku" />

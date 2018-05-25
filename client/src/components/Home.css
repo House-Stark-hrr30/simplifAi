@@ -202,6 +202,7 @@
   font-size: 1.6rem;
   -webkit-transform: skewX(-12deg);
   transform: skewX(-12deg);
+  min-height: 243px;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -209,12 +210,14 @@
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
+    min-height: 253px;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .story {
     -webkit-transform: skewX(0);
     transform: skewX(0);
+    min-height: 338px;
   }
 }
 .story__shape {
@@ -286,13 +289,13 @@
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 3rem 3rem 15rem 3rem;
+  padding: 3rem 3rem 10rem 3rem;
   /* margin-top: -20vh; */
 }
 
 @media only screen and (max-width: 56.25em) {
   .section-about {
-    padding: 20rem 0;
+    padding: 4rem 0 15rem;
   }
 }
 
@@ -309,7 +312,7 @@
 
 .section-stories {
   position: relative;
-  padding: 10rem 0;
+  padding: 7rem 0 10rem;
 }
 
 @media only screen and (max-width: 56.25em) {

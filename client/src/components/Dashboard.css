@@ -57,13 +57,13 @@
 }
 
 .features {
-  padding: 7rem 10rem 15rem 10rem;
+  padding: 4rem 10rem 15rem 10rem;
   position: relative;
 }
 
 @media only screen and (max-width: 56.25em) {
   .features {
-    padding: 8rem 0;
+    padding: 3rem 0 8rem;
   }
 }
 
