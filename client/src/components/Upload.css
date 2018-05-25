@@ -3,14 +3,14 @@
 }
 
 .Upload {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /*display: grid;*/
+  /*grid-template-columns: repeat(5, 1fr);*/
   /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-gap: 1%;
+  /*grid-gap: 1%;*/
   /* grid-auto-rows: minmax(100px, auto);
   grid-template-rows: min-content 50px max-content;
   grid-auto-rows: 50px; */
-  grid-template-rows: 16% 16% 16% 16% 16% auto;
+  /*grid-template-rows: 16% 16% 16% 16% 16% auto;*/
   /* grid-template-rows: repeat(6, 1fr); */
   /* grid-template-rows: repeat( auto-fill, minmax(30px, 1fr) ); */
   /* grid-template-rows: 1fr min-content; */
@@ -180,9 +180,10 @@ grid_item .content-inside {
 }
 
 .heading-main {
+  margin-top: 20px;
   font-size: 3rem !important;
   font-weight: 700;
-  display: inline-block;
+  /*display: inline-block;*/
   letter-spacing: .2rem;
   font-family: Raleway, sans-serif;
 }
@@ -212,9 +213,19 @@ grid_item .content-inside {
 .chart-dropdown-label {
   font-size: 12px;
   margin-right: 5px;
+  width: auto;
+}
+
+.chart-dropdown {
+  margin: 2% 71.8% 0 0;
+  display: inline-block;
+}
+
+.titles {
+  text-align: center;
 }
 
 .bottom-btns {
-  margin: 2% 520px 0 0;
-  display: inline-block;
+  margin: auto;
+  width: 50%;
 }

@@ -49,7 +49,7 @@ const MachineLearning = (props) => {
                   </div>
                   <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Siri</h3>
                     <p className="feature-box__text ml-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                        Apple's Siri uses machine learning to create an assistant that answer's user questions and tends to their needs.
                     </p>
               </div>
               <div className="col-1-of-4">
@@ -58,7 +58,7 @@ const MachineLearning = (props) => {
                   </div>
                   <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">iMessage</h3>
                     <p className="feature-box__text ml-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                        Machine learning helps analyzes previous user text inputs to give text suggestions in iMessage.
                     </p>
               </div>
               <div className="col-1-of-4">
@@ -67,7 +67,7 @@ const MachineLearning = (props) => {
                   </div>
                   <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Youtube</h3>
                     <p className="feature-box__text ml-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                        Youtube gives video recommendations based on the user's viewing history using machine learning.
                     </p>
               </div>
               <div className="col-1-of-4">
@@ -76,12 +76,12 @@ const MachineLearning = (props) => {
                   </div>
                       <h3 className="heading-tertiary-ml margin-bottom-small margin-top-small">Amazon</h3>
                       <p className="feature-box__text ml-text">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
+                          Suggested products to purchase for the user are calculated through Amazon's machine learning algorithm.
                       </p>
               </div>
           </div>
       </div>
-      
+
     </div>
   );
 }

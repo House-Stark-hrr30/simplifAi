@@ -84,9 +84,7 @@ class SpreadsheetTable extends Component {
   render() {
     return (
       <div className="table-area">
-      <div style={{
-
-}}>
+      <div>
         <input
         className="spreadsheet-input" type="text" placeholder="Enter your google sheet key" onChange={this.handleGoogleSheetIDChange.bind(this)} />
         <button type="button" className="import-btn" onClick={this.handleImportClick.bind(this)}>Import</button>

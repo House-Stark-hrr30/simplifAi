@@ -1,13 +1,19 @@
-.chart-style {
+.chart-style-chart {
   width: 800px;
   margin: 2% auto 2% auto;
 }
 
-.chart-dropdown {
+.chart-dropdown-chart {
   font-size: 12px;
+  width: auto;
 }
 
 #charts {
   font-size: 12px;
   background-color: white;
+}
+
+.chart-btns-chart {
+  text-align: center;
+  margin-bottom: 25px;
 }
