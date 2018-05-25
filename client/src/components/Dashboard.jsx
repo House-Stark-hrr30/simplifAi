@@ -73,7 +73,7 @@ class Dashboard extends Component {
                     </div>
                 </Link>
 
-                <Card title="TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest" body="This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!" />
+                {/* <Card title="TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest" body="This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!This is a test!" /> */}
 
             </div>
         </div>
