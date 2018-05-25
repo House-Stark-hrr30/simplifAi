@@ -212,6 +212,7 @@ grid_item .content-inside {
 .chart-dropdown-label {
   font-size: 12px;
   margin-right: 5px;
+  width: auto;
 }
 
 .bottom-btns {

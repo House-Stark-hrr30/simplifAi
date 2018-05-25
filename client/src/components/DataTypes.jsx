@@ -81,7 +81,7 @@ class DataTypes extends Component {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       speed: 3000,
       autoplaySpeed: 3000,
       cssEase: "linear",
@@ -122,7 +122,7 @@ class DataTypes extends Component {
   }
 }
 
-const CustomPrevArrow = props => { 
+const CustomPrevArrow = props => {
   return (
     <button type="button" className="slick-prev">Previous</button>
   );
