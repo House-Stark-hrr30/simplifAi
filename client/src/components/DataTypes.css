@@ -219,11 +219,12 @@
 .slick-prev:before
 {
     content: '<';
+    /* content: '&#8678'; */
 }
-[dir='rtl'] .slick-prev:before
+/* [dir='rtl'] .slick-prev:before
 {
     content: '→';
-}
+} */
 
 .slick-next
 {
@@ -400,7 +401,7 @@
   }
 
   .slick-prev-real:before {
-    color: white !important;
+    /* color: white !important; */
   }
   
   .slick-next {
@@ -408,7 +409,7 @@
   }
 
   .slick-next-real:before {
-    color: white !important;
+    /* color: white !important; */
   }
   
   /* .slick-next {
@@ -528,3 +529,7 @@
     opacity: 0.01;
     transition: opacity .5s ease-in;
   } */
+
+#slick-prev, #slick-next {
+    color: #777;
+}

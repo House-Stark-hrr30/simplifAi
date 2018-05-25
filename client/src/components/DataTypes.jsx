@@ -6,6 +6,8 @@ import Slider from "react-slick";
 // import "./slick/slick-theme.css";
 import "./DataTypes.css";
 import Card from './Card.jsx';
+import CustomPrevArrow from 'react-icons/lib/fa/chevron-circle-left';
+import CustomNextArrow from 'react-icons/lib/fa/chevron-circle-right';
 
 
 class DataTypes extends Component {
@@ -110,14 +112,17 @@ class DataTypes extends Component {
       // autoplaySpeed: 3000,
       cssEase: "linear",
       // arrows: false,
-      // prevArrow: < CustomPrevArrow  />,
-      // nextArrow: < CustomNextArrow  />,
+      prevArrow: < CustomPrevArrow id="slick-prev"/>,
+      nextArrow: < CustomNextArrow id="slick-next"/>,
       // centerMode: true
     };
     return (
       <div className="carousel">
         <h2 className="carousel-heading">Data Types</h2>
-          <CustomPrevArrow onClick={this.prev}/>
+        {/* <CustomPrevArrow onClick={this.prev}>Previous</CustomPrevArrow>  <CustomNextArrow onClick={this.next}>Next</CustomNextArrow> */}
+        
+        <div>
+        {/* <CustomPrevArrow  onClick={this.prev}>Previous</CustomPrevArrow> */}
         <Slider {...settings}>
           {/* <button type="button" className="slick-prev">Previous</button> */}
           <div className="card-1 Slider">
@@ -141,25 +146,27 @@ class DataTypes extends Component {
           </div>
           {/* <button type="button" className="slick-next">Next</button> */}
         </Slider>
-          < CustomNextArrow onClick={this.next}/>
+        {/* < CustomNextArrow className="slick-next slick-next-real" onClick={this.next}>Next</ CustomNextArrow> */}
+        </div>
+
       </div>
     );
   }
 }
 
-const CustomPrevArrow = props => { 
-  return (
-    <button type="button" className="slick-prev slick-prev-real">Previous</button>
-  );
-};
+// const CustomPrevArrow = props => { 
+//   return (
+//     <button type="button" className="slick-prev slick-prev-real">Previous</button>
+//   );
+// };
 
-const CustomNextArrow = props => {
-  return (
-    // <div {...this.props}>
-    //   <img src="/images/arrow_prev.png" />
-    // </div>
-    <button type="button" className="slick-next slick-next-real">Next</button>
-  );
-};
+// const CustomNextArrow = props => {
+//   return (
+//     // <div {...this.props}>
+//     //   <img src="/images/arrow_prev.png" />
+//     // </div>
+//     <button type="button" className="slick-next slick-next-real">Next</button>
+//   );
+// };
 
 export default DataTypes;
