@@ -92,25 +92,27 @@ class SpreadsheetTable extends Component {
         <button className="add-col-btn" onClick={this.addColumn.bind(this)}>Add Column</button>
         <button className="add-row-btn" onClick={this.addRow.bind(this)}>Add Row</button>
         </div>
-        <Table
-          rowKey={(() => {
-            let x = 0;
-            return () => {
-              x++;
-              return x - 1;
-            }
-          })()}
-          columns={this.getSpreadsheetHeaderData()}
-          scroll={{ x: 650, y: 200 }}
-          data={this.getSpreadsheetBodyData()}
-          style={{ width: 725 }}
-          onHeaderRow={(record, index) => ({
-            onClick: this.addColumn.bind(this, record, index)
-          })}
-          onRow={(record, index) => ({
-            onClick: this.addRow.bind(this, record, index)
-          })}
-        />
+        <div className="table-style">
+          <Table
+            rowKey={(() => {
+              let x = 0;
+              return () => {
+                x++;
+                return x - 1;
+              }
+            })()}
+            columns={this.getSpreadsheetHeaderData()}
+            scroll={{ x: 650, y: 200 }}
+            data={this.getSpreadsheetBodyData()}
+            style={{ width: 725 }}
+            onHeaderRow={(record, index) => ({
+              onClick: this.addColumn.bind(this, record, index)
+            })}
+            onRow={(record, index) => ({
+              onClick: this.addRow.bind(this, record, index)
+            })}
+          />
+        </div>
       </div>
 
     );
